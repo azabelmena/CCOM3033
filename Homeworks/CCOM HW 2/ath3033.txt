@@ -1,0 +1,15 @@
+Transaction info for account no.123456789 On ATH no. 483 On Thu Oct  8 09:17:27 2020
+
+Initial Balance: 420
+TRANSACTION        AMMOUNT        BALANCE           DATE
+Deposit:            1000           1420     Thu Oct  8 09:17:27 2020
+
+Withdrawal:           20           1400     Thu Oct  8 09:17:27 2020
+
+Balance Check:      1400           1400     Thu Oct  8 09:17:27 2020
+
+
+Transaction info for account no.123456789 On ATH no. 483 On Mon Oct 12 14:01:50 2020
+
+Initial Balance: 420
+TRANSACTION        AMMOUNT        BALANCE           DATE

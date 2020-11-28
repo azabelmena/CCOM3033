@@ -1,0 +1,10 @@
+ATH	TRANSACCION	      CANTIDAD		NUEVO BALANCE		FECHA
+427	Deposito		67.91             1067.91       Sun Oct 18 19:40:14 2020
+427	Deposito		67.00             1134.91       Sun Oct 18 19:40:28 2020
+427	Deposito		43.00             1177.91       Sun Oct 18 19:40:58 2020
+427	Retiro			60.00             1117.91       Sun Oct 18 19:41:10 2020
+427	Balance_Check	      1117.91             1117.91       Sun Oct 18 19:41:15 2020
+146	Deposito		90.00             1207.91       Tue Oct 20 13:20:18 2020
+146	Balance_Check	      1207.91             1207.91       Tue Oct 20 13:21:02 2020
+392	Retiro			80.00             1127.91       Fri Oct 23 16:11:10 2020
+392	Balance_Check  	      1127.91             1127.91       Fri Oct 23 16:11:46 2020

@@ -1,0 +1,118 @@
+Bank of UPR
+Account_No.     123456789
+Name:           Alec Zabel-Mena
+Soc_Security:   420-69-6669
+PIN:            6969
+Balance:        420.00
+
+Transaction info for accont no 123456789 On ATH no. 483Fri Oct 16 19:22:58 2020
+
+Initial Balance: $420
+TRANSACTION        AMMOUNT        BALANCE           DATE
+Deposit:             420           1260     Fri Oct 16 19:22:58 2020
+
+Deposit:          420.69        2101.38     Fri Oct 16 19:22:58 2020
+
+Withdrawal:             20        2081.38     Fri Oct 16 19:22:58 2020
+
+Balance Check:        2081.38        2081.38     Fri Oct 16 19:22:58 2020
+
+
+Transaction info for accont no 123456789 On ATH no. 483Fri Oct 16 19:51:35 2020
+
+Initial Balance: $420
+TRANSACTION        AMMOUNT        BALANCE           DATE
+Deposit:          420.69         840.69     Fri Oct 16 19:51:35 2020
+
+Deposit:             420        1260.69     Fri Oct 16 19:51:35 2020
+
+
+Transaction info for accont no 123456789 On ATH no. 483Fri Oct 16 19:59:32 2020
+
+Initial Balance: $420
+TRANSACTION        AMMOUNT        BALANCE           DATE
+
+Transaction info for accont no 123456789 On ATH no. 483Fri Oct 16 20:00:21 2020
+
+Initial Balance: $420
+TRANSACTION        AMMOUNT        BALANCE           DATE
+Balance Check:            420            420     Fri Oct 16 20:00:21 2020
+
+
+Transaction info for accont no 123456789 On ATH no. 483Fri Oct 16 20:02:00 2020
+
+Initial Balance: $420
+TRANSACTION        AMMOUNT        BALANCE           DATE
+Deposit:              10            430     Fri Oct 16 20:02:00 2020
+
+
+Transaction info for accont no 123456789 On ATH no. 483Fri Oct 16 20:02:39 2020
+
+Initial Balance: $420
+TRANSACTION        AMMOUNT        BALANCE           DATE
+Balance Check:            420            420     Fri Oct 16 20:02:39 2020
+
+
+Transaction info for accont no 123456789 On ATH no. 483Fri Oct 16 20:03:27 2020
+
+Initial Balance: $420
+TRANSACTION        AMMOUNT        BALANCE           DATE
+Deposit:              10            430     Fri Oct 16 20:03:27 2020
+
+
+Transaction info for accont no 123456789 On ATH no. 483Fri Oct 16 20:03:35 2020
+
+Initial Balance: $420
+TRANSACTION        AMMOUNT        BALANCE           DATE
+Withdrawal:             20            400     Fri Oct 16 20:03:35 2020
+
+
+Transaction info for accont no 123456789 On ATH no. 483Fri Oct 16 20:03:43 2020
+
+Initial Balance: $420
+TRANSACTION        AMMOUNT        BALANCE           DATE
+Balance Check:            420            420     Fri Oct 16 20:03:43 2020
+
+
+Transaction info for accont no 123456789 On ATH no. 483Fri Oct 16 20:12:10 2020
+
+Initial Balance: $420
+TRANSACTION        AMMOUNT        BALANCE           DATE
+
+Transaction info for accont no 123456789 On ATH no. 483Sat Oct 31 12:13:19 2020
+
+Initial Balance: $420
+TRANSACTION        AMMOUNT        BALANCE           DATE
+Withdrawal:           20.5            400     Sat Oct 31 12:13:19 2020
+
+
+Transaction info for accont no 123456789 On ATH no. 483Sat Oct 31 12:15:00 2020
+
+Initial Balance: $420
+TRANSACTION        AMMOUNT        BALANCE           DATE
+Withdrawal:             20            400     Sat Oct 31 12:15:00 2020
+
+
+Transaction info for accont no 123456789 On ATH no. 483Sat Oct 31 12:17:14 2020
+
+Initial Balance: $420
+TRANSACTION        AMMOUNT        BALANCE           DATE
+Balance Check:            420            420     Sat Oct 31 12:17:14 2020
+
+Deposit:             200            620     Sat Oct 31 12:17:14 2020
+
+Deposit:              20            640     Sat Oct 31 12:17:14 2020
+
+Withdrawal:             20            620     Sat Oct 31 12:17:14 2020
+
+Balance Check:            620            620     Sat Oct 31 12:17:14 2020
+
+
+Transaction info for accont no 123456789 On ATH no. 483Sat Oct 31 12:22:18 2020
+
+Initial Balance: $420
+TRANSACTION        AMMOUNT        BALANCE           DATE
+Deposit:              10            430     Sat Oct 31 12:22:18 2020
+
+Withdrawal:             20            410     Sat Oct 31 12:22:18 2020
+

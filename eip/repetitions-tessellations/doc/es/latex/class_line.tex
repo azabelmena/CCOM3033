@@ -1,0 +1,274 @@
+\hypertarget{class_line}{}\section{Referencia de la Clase Line}
+\label{class_line}\index{Line@{Line}}
+
+
+{\ttfamily \#include $<$line.\+h$>$}
+
+Diagrama de herencias de Line\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_line}
+\end{center}
+\end{figure}
+\subsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_line_a4d475f9d634f50933ca84e25d7cf32f9}{}\hyperlink{class_line_a4d475f9d634f50933ca84e25d7cf32f9}{Line} (Q\+Widget $\ast$parent=0)\label{class_line_a4d475f9d634f50933ca84e25d7cf32f9}
+
+\begin{DoxyCompactList}\small\item\em Constructor que ajusta las coordenadas a 0, el color y el ancho del boligrafo a negro y 1 respectivamente. \end{DoxyCompactList}\item 
+\hyperlink{class_line_a37f70dab8d5cc7560e6362093a3aa1b9}{Line} (int from\+X, int from\+Y, int to\+X, int to\+Y, int w, Q\+Color c, Q\+Widget $\ast$parent=0)
+\begin{DoxyCompactList}\small\item\em Constructor de una linea, especificando las coordenadas (from\+X,from\+Y) y (to\+X,to\+Y) \end{DoxyCompactList}\item 
+\hyperlink{class_line_a742b2aea487313953635d1e504c6b866}{Line} (int from\+X, int from\+Y, int length, double angle, int w, Q\+Color c, Q\+Widget $\ast$parent=0)
+\begin{DoxyCompactList}\small\item\em Constructor de una linea, especificando la coordenada (from\+X, from\+Y) and el largo (length) y el angulo (angle). \end{DoxyCompactList}\item 
+void \hyperlink{class_line_ac1475ffee823a7c05b2ac91bfe61596d}{set\+Coords} (int from\+X, int from\+Y, int to\+X, int to\+Y)
+\begin{DoxyCompactList}\small\item\em Ajustador de las coordenadas de la linea. \end{DoxyCompactList}\item 
+void \hyperlink{class_line_ac5b6d8e786cf3820fa36b8bda7130823}{setpen\+Color} (Q\+Color c)
+\begin{DoxyCompactList}\small\item\em Ajustador del color del boligrafo. \end{DoxyCompactList}\item 
+void \hyperlink{class_line_a346d88820371b5a4710eed8a638fc451}{set\+Pen\+Width} (int w)
+\begin{DoxyCompactList}\small\item\em Ajustador del ancho del boligrafo. \end{DoxyCompactList}\item 
+int \hyperlink{class_line_a0e23ee7edc154bd73fefab4d88cae150}{get\+X0} ()
+\begin{DoxyCompactList}\small\item\em Devuelve la coordenada inicial x. \end{DoxyCompactList}\item 
+int \hyperlink{class_line_a971146fd8bbf711123f03e45daf923c9}{get\+Y0} ()
+\begin{DoxyCompactList}\small\item\em Devuelve la coordenada inicial y. \end{DoxyCompactList}\item 
+int \hyperlink{class_line_a1f51d8df03219f5f63d656bc0e9b2830}{get\+X1} ()
+\begin{DoxyCompactList}\small\item\em Devuelve la coordenada final x. \end{DoxyCompactList}\item 
+int \hyperlink{class_line_a9cc398fdcf93212a3e4db28ac26a88a9}{get\+Y1} ()
+\begin{DoxyCompactList}\small\item\em Devuelve la coordenada final y. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Métodos protegidos}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_line_a7e1f30fa9d7375fd67a2b4cf5a1b6a76}{}void \hyperlink{class_line_a7e1f30fa9d7375fd67a2b4cf5a1b6a76}{paint\+Event} (Q\+Paint\+Event $\ast$)\label{class_line_a7e1f30fa9d7375fd67a2b4cf5a1b6a76}
+
+\begin{DoxyCompactList}\small\item\em La funcion para el evento de pintar es invocada automaticamente cada ves que evento de repintar ocurre. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_line_a647f6f5c0e2b197e3671f8bdb9ff64a2}{x0}
+\item 
+int \hyperlink{class_line_a8e276229892969c7d82f56581e0c168b}{y0}
+\item 
+int \hyperlink{class_line_a1c37aeef714f6c96454c2a9a2dadb69a}{x1}
+\item 
+int \hyperlink{class_line_a850c96af61bd595a68b5e867540204f1}{y1}
+\item 
+int \hyperlink{class_line_a4fc1d856f822dd0b88676e6c22a65f14}{pen\+Width}
+\item 
+Q\+Color \hyperlink{class_line_a8778d952d4d2867bd2f31e5857c368b4}{pen\+Color}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+Una clase para describir lineas 
+
+\subsection{Documentación del constructor y destructor}
+\hypertarget{class_line_a37f70dab8d5cc7560e6362093a3aa1b9}{}\index{Line@{Line}!Line@{Line}}
+\index{Line@{Line}!Line@{Line}}
+\subsubsection[{Line}]{\setlength{\rightskip}{0pt plus 5cm}Line\+::\+Line (
+\begin{DoxyParamCaption}
+\item[{int}]{from\+X, }
+\item[{int}]{from\+Y, }
+\item[{int}]{to\+X, }
+\item[{int}]{to\+Y, }
+\item[{int}]{w, }
+\item[{Q\+Color}]{c, }
+\item[{Q\+Widget $\ast$}]{parent = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}\label{class_line_a37f70dab8d5cc7560e6362093a3aa1b9}
+
+
+Constructor de una linea, especificando las coordenadas (from\+X,from\+Y) y (to\+X,to\+Y) 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em from\+X} & coordenada x inicial \\
+\hline
+{\em from\+Y} & coordenada y inicial \\
+\hline
+{\em to\+X} & coordenada x final \\
+\hline
+{\em to\+Y} & end coordenada y final \\
+\hline
+{\em w} & ancho del boligrafo \\
+\hline
+{\em c} & color de la linea. \\
+\hline
+{\em parent} & parent of this line \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_line_a742b2aea487313953635d1e504c6b866}{}\index{Line@{Line}!Line@{Line}}
+\index{Line@{Line}!Line@{Line}}
+\subsubsection[{Line}]{\setlength{\rightskip}{0pt plus 5cm}Line\+::\+Line (
+\begin{DoxyParamCaption}
+\item[{int}]{from\+X, }
+\item[{int}]{from\+Y, }
+\item[{int}]{length, }
+\item[{double}]{angle, }
+\item[{int}]{w, }
+\item[{Q\+Color}]{c, }
+\item[{Q\+Widget $\ast$}]{parent = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}\label{class_line_a742b2aea487313953635d1e504c6b866}
+
+
+Constructor de una linea, especificando la coordenada (from\+X, from\+Y) and el largo (length) y el angulo (angle). 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em from\+X} & coordenada x inicial \\
+\hline
+{\em from\+Y} & coordenada y inicia \\
+\hline
+{\em length} & largo de la linea \\
+\hline
+{\em angle} & angulo de la linea \\
+\hline
+{\em w} & ancho de la linea \\
+\hline
+{\em c} & color de la linea \\
+\hline
+{\em parent} & padre de esta linea \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Documentación de las funciones miembro}
+\hypertarget{class_line_a0e23ee7edc154bd73fefab4d88cae150}{}\index{Line@{Line}!get\+X0@{get\+X0}}
+\index{get\+X0@{get\+X0}!Line@{Line}}
+\subsubsection[{get\+X0}]{\setlength{\rightskip}{0pt plus 5cm}int Line\+::get\+X0 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_line_a0e23ee7edc154bd73fefab4d88cae150}
+
+
+Devuelve la coordenada inicial x. 
+
+\begin{DoxyReturn}{Devuelve}
+coordenada inicial x 
+\end{DoxyReturn}
+\hypertarget{class_line_a1f51d8df03219f5f63d656bc0e9b2830}{}\index{Line@{Line}!get\+X1@{get\+X1}}
+\index{get\+X1@{get\+X1}!Line@{Line}}
+\subsubsection[{get\+X1}]{\setlength{\rightskip}{0pt plus 5cm}int Line\+::get\+X1 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_line_a1f51d8df03219f5f63d656bc0e9b2830}
+
+
+Devuelve la coordenada final x. 
+
+\begin{DoxyReturn}{Devuelve}
+coordenada final x. 
+\end{DoxyReturn}
+\hypertarget{class_line_a971146fd8bbf711123f03e45daf923c9}{}\index{Line@{Line}!get\+Y0@{get\+Y0}}
+\index{get\+Y0@{get\+Y0}!Line@{Line}}
+\subsubsection[{get\+Y0}]{\setlength{\rightskip}{0pt plus 5cm}int Line\+::get\+Y0 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_line_a971146fd8bbf711123f03e45daf923c9}
+
+
+Devuelve la coordenada inicial y. 
+
+\begin{DoxyReturn}{Devuelve}
+coordenada inicial y 
+\end{DoxyReturn}
+\hypertarget{class_line_a9cc398fdcf93212a3e4db28ac26a88a9}{}\index{Line@{Line}!get\+Y1@{get\+Y1}}
+\index{get\+Y1@{get\+Y1}!Line@{Line}}
+\subsubsection[{get\+Y1}]{\setlength{\rightskip}{0pt plus 5cm}int Line\+::get\+Y1 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_line_a9cc398fdcf93212a3e4db28ac26a88a9}
+
+
+Devuelve la coordenada final y. 
+
+\begin{DoxyReturn}{Devuelve}
+coordenada final y 
+\end{DoxyReturn}
+\hypertarget{class_line_ac1475ffee823a7c05b2ac91bfe61596d}{}\index{Line@{Line}!set\+Coords@{set\+Coords}}
+\index{set\+Coords@{set\+Coords}!Line@{Line}}
+\subsubsection[{set\+Coords}]{\setlength{\rightskip}{0pt plus 5cm}void Line\+::set\+Coords (
+\begin{DoxyParamCaption}
+\item[{int}]{from\+X, }
+\item[{int}]{from\+Y, }
+\item[{int}]{to\+X, }
+\item[{int}]{to\+Y}
+\end{DoxyParamCaption}
+)}\label{class_line_ac1475ffee823a7c05b2ac91bfe61596d}
+
+
+Ajustador de las coordenadas de la linea. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em from\+X} & coordenada x inicial \\
+\hline
+{\em from\+Y} & coordenada y inicial \\
+\hline
+{\em to\+X} & coordenada x final \\
+\hline
+{\em to\+Y} & end coordenada y final \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_line_ac5b6d8e786cf3820fa36b8bda7130823}{}\index{Line@{Line}!setpen\+Color@{setpen\+Color}}
+\index{setpen\+Color@{setpen\+Color}!Line@{Line}}
+\subsubsection[{setpen\+Color}]{\setlength{\rightskip}{0pt plus 5cm}void Line\+::setpen\+Color (
+\begin{DoxyParamCaption}
+\item[{Q\+Color}]{c}
+\end{DoxyParamCaption}
+)}\label{class_line_ac5b6d8e786cf3820fa36b8bda7130823}
+
+
+Ajustador del color del boligrafo. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em c} & color de la linea \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_line_a346d88820371b5a4710eed8a638fc451}{}\index{Line@{Line}!set\+Pen\+Width@{set\+Pen\+Width}}
+\index{set\+Pen\+Width@{set\+Pen\+Width}!Line@{Line}}
+\subsubsection[{set\+Pen\+Width}]{\setlength{\rightskip}{0pt plus 5cm}void Line\+::set\+Pen\+Width (
+\begin{DoxyParamCaption}
+\item[{int}]{w}
+\end{DoxyParamCaption}
+)}\label{class_line_a346d88820371b5a4710eed8a638fc451}
+
+
+Ajustador del ancho del boligrafo. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em w} & ancho de la linea \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Documentación de los datos miembro}
+\hypertarget{class_line_a8778d952d4d2867bd2f31e5857c368b4}{}\index{Line@{Line}!pen\+Color@{pen\+Color}}
+\index{pen\+Color@{pen\+Color}!Line@{Line}}
+\subsubsection[{pen\+Color}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Color Line\+::pen\+Color\hspace{0.3cm}{\ttfamily [private]}}\label{class_line_a8778d952d4d2867bd2f31e5857c368b4}
+pen color / color del boligrafo \hypertarget{class_line_a4fc1d856f822dd0b88676e6c22a65f14}{}\index{Line@{Line}!pen\+Width@{pen\+Width}}
+\index{pen\+Width@{pen\+Width}!Line@{Line}}
+\subsubsection[{pen\+Width}]{\setlength{\rightskip}{0pt plus 5cm}int Line\+::pen\+Width\hspace{0.3cm}{\ttfamily [private]}}\label{class_line_a4fc1d856f822dd0b88676e6c22a65f14}
+pen width / ancho del boligrafo \hypertarget{class_line_a647f6f5c0e2b197e3671f8bdb9ff64a2}{}\index{Line@{Line}!x0@{x0}}
+\index{x0@{x0}!Line@{Line}}
+\subsubsection[{x0}]{\setlength{\rightskip}{0pt plus 5cm}int Line\+::x0\hspace{0.3cm}{\ttfamily [private]}}\label{class_line_a647f6f5c0e2b197e3671f8bdb9ff64a2}
+initial coord x / coordenada inicial x \hypertarget{class_line_a1c37aeef714f6c96454c2a9a2dadb69a}{}\index{Line@{Line}!x1@{x1}}
+\index{x1@{x1}!Line@{Line}}
+\subsubsection[{x1}]{\setlength{\rightskip}{0pt plus 5cm}int Line\+::x1\hspace{0.3cm}{\ttfamily [private]}}\label{class_line_a1c37aeef714f6c96454c2a9a2dadb69a}
+ending coord x / coordenada final x \hypertarget{class_line_a8e276229892969c7d82f56581e0c168b}{}\index{Line@{Line}!y0@{y0}}
+\index{y0@{y0}!Line@{Line}}
+\subsubsection[{y0}]{\setlength{\rightskip}{0pt plus 5cm}int Line\+::y0\hspace{0.3cm}{\ttfamily [private]}}\label{class_line_a8e276229892969c7d82f56581e0c168b}
+initial coord y / coordenada inicial y \hypertarget{class_line_a850c96af61bd595a68b5e867540204f1}{}\index{Line@{Line}!y1@{y1}}
+\index{y1@{y1}!Line@{Line}}
+\subsubsection[{y1}]{\setlength{\rightskip}{0pt plus 5cm}int Line\+::y1\hspace{0.3cm}{\ttfamily [private]}}\label{class_line_a850c96af61bd595a68b5e867540204f1}
+ending coord y / coordenada final y 
+
+La documentación para esta clase fue generada a partir de los siguientes ficheros\+:\begin{DoxyCompactItemize}
+\item 
+line.\+h\item 
+line.\+cpp\end{DoxyCompactItemize}

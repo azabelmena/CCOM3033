@@ -1,0 +1,14 @@
+﻿/*
+
+Salary
+
+Alec Zabel-Mena
+801169720
+CCOM3033-001
+
+salary.cpp
+Proposito: The prupose of this program is to ask the user (an employee), their name and social security, their wage, and how many hours they worked.
+           We then use this to calculate their gross salary, their net salary, and the ammount deducted from their gross salary. We then display this
+           to the user, along with their information (name, social security).
+
+*/

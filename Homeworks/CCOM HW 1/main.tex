@@ -1,0 +1,77 @@
+\documentclass[10pt]{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{latexsym}
+\usepackage{graphicx}
+\usepackage{comment}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,quotes}
+\usepackage{hyperref}
+
+
+\newtheorem{theorem}{Theorem}
+
+
+% Do not change the following commands.
+\addtolength{\oddsidemargin}{-1.1in}
+\addtolength{\evensidemargin}{-1.1in}
+\addtolength{\textwidth}{2.2in}
+\addtolength{\topmargin}{-1in}
+\addtolength{\textheight}{1.4in}
+% -------------------------------------
+
+\newcommand{\latex}{\LaTeX\xspace}
+
+\renewcommand{\arraystretch}{1.5}
+
+\begin{document}
+
+
+\title{Homework 1 \\ CCOM3033-002}
+\author{Alec Zabel-Mena \\801-16-9720}
+\maketitle
+
+\section{Problem 5 (Review question) on page 136.}
+
+\begin{enumerate}
+    \item $a = 12*x$
+
+    \item $z= 5*x+14*y+6*k$
+
+    \item $y = x*x*x*x$ or $y=pow(x,2.0)$ (requires cmath.h).
+
+    \item $g = (h+12)/(4*k)$
+
+    \item $c = (a*a*a)/((b*b)*(k*k*k*k))$ or $c = (pow(a,3.0))/(pow(b,2.0)*
+        pow(k,4.0))$ (requires cmath.h). 
+\end{enumerate}
+
+\section{Problem 25 (Algorithm Workbench) on page 138}
+\subsection{Pseudocode for retailCredit.cpp}
+
+We display the pseudocode for retailCredit:
+
+\begin{enumerate}
+    \item \textbf{DECLARE:} maxCredit, usedCredit, retailCredit
+
+    \item \textbf{DISPLAY:} ``What is your max credit? ''
+        \begin{itemize}
+            \item \textbf{INPUT:} maxCredit
+        \end{itemize}
+
+    \item \textbf{DISPLAY:} ``What is your used credit? ''
+        \begin{itemize}
+            \item \textbf{INPUT:} usedCredit
+        \end{itemize}
+
+    \item retailCredit=maxCredit-usedCredit
+
+    \item \textbf{DISPLAY:} ``Your retail credit is: '' retailCredit
+
+\end{enumerate}
+
+
+
+\end{document}

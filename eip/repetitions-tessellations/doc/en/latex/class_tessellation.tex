@@ -1,0 +1,177 @@
+\hypertarget{class_tessellation}{}\section{Tessellation Class Reference}
+\label{class_tessellation}\index{Tessellation@{Tessellation}}
+
+
+{\ttfamily \#include $<$tessellation.\+h$>$}
+
+Inheritance diagram for Tessellation\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_tessellation}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_tessellation_a3d77f5ad7aa19936ab47b43b7251526f}{Tessellation} (Q\+Widget $\ast$parent=0)
+\begin{DoxyCompactList}\small\item\em Constructor. Creates a tesselation like this\+:  \end{DoxyCompactList}\item 
+int \hyperlink{class_tessellation_a7d911890db50eb39146c1ec2d771a7dd}{get\+Rotation} ()
+\begin{DoxyCompactList}\small\item\em Getter for the rotation. \end{DoxyCompactList}\item 
+int \hyperlink{class_tessellation_a9280b338ed41af0ec33e81391e76f82a}{get\+Width} ()
+\begin{DoxyCompactList}\small\item\em Getter for the tesseltation width. \end{DoxyCompactList}\item 
+int \hyperlink{class_tessellation_a5fbfd2325a4ba0b7d4e66ce98e474c56}{get\+Height} ()
+\begin{DoxyCompactList}\small\item\em Getter for the tesseltation height. \end{DoxyCompactList}\item 
+void \hyperlink{class_tessellation_a4ee5bac93c53b25ff1d4ec8a43fdad64}{set\+Rotation} (int r)
+\begin{DoxyCompactList}\small\item\em Setter for the tesselation rotation. \end{DoxyCompactList}\item 
+void \hyperlink{class_tessellation_aa035a163e76a1616c58d20938b2853aa}{set\+Width} (int w)
+\begin{DoxyCompactList}\small\item\em Setter for the tesselation width. \end{DoxyCompactList}\item 
+void \hyperlink{class_tessellation_a57273ef613b239b6e16ea97085d2f4df}{set\+Height} (int h)
+\begin{DoxyCompactList}\small\item\em Setter for the tesselation height. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_tessellation_aed2d64951d5d8b7e4fefde70c072b7c1}{}void \hyperlink{class_tessellation_aed2d64951d5d8b7e4fefde70c072b7c1}{paint\+Event} (Q\+Paint\+Event $\ast$)\label{class_tessellation_aed2d64951d5d8b7e4fefde70c072b7c1}
+
+\begin{DoxyCompactList}\small\item\em Paints a tessellation in the window every time that a paint event occurs. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_tessellation_ac09f5100d6f72ad8c4d4ff52268434ca}{rotation}
+\item 
+int \hyperlink{class_tessellation_a943c56fd0f2e174add80b3bbeb11e74b}{width}
+\item 
+int \hyperlink{class_tessellation_a94b9f62e66d1b4e967483a7aea75b830}{height}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A class to create tessellations. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_tessellation_a3d77f5ad7aa19936ab47b43b7251526f}{}\index{Tessellation@{Tessellation}!Tessellation@{Tessellation}}
+\index{Tessellation@{Tessellation}!Tessellation@{Tessellation}}
+\subsubsection[{Tessellation}]{\setlength{\rightskip}{0pt plus 5cm}Tessellation\+::\+Tessellation (
+\begin{DoxyParamCaption}
+\item[{Q\+Widget $\ast$}]{parent = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}\label{class_tessellation_a3d77f5ad7aa19936ab47b43b7251526f}
+
+
+Constructor. Creates a tesselation like this\+:  
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & parent of this tesselation, you should pass a reference to the window where this tesselation \textquotesingle{}lives\textquotesingle{}. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_tessellation_a5fbfd2325a4ba0b7d4e66ce98e474c56}{}\index{Tessellation@{Tessellation}!get\+Height@{get\+Height}}
+\index{get\+Height@{get\+Height}!Tessellation@{Tessellation}}
+\subsubsection[{get\+Height}]{\setlength{\rightskip}{0pt plus 5cm}int Tessellation\+::get\+Height (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_tessellation_a5fbfd2325a4ba0b7d4e66ce98e474c56}
+
+
+Getter for the tesseltation height. 
+
+\begin{DoxyReturn}{Returns}
+tesselation height 
+\end{DoxyReturn}
+\hypertarget{class_tessellation_a7d911890db50eb39146c1ec2d771a7dd}{}\index{Tessellation@{Tessellation}!get\+Rotation@{get\+Rotation}}
+\index{get\+Rotation@{get\+Rotation}!Tessellation@{Tessellation}}
+\subsubsection[{get\+Rotation}]{\setlength{\rightskip}{0pt plus 5cm}int Tessellation\+::get\+Rotation (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_tessellation_a7d911890db50eb39146c1ec2d771a7dd}
+
+
+Getter for the rotation. 
+
+\begin{DoxyReturn}{Returns}
+The rotation 
+\end{DoxyReturn}
+\hypertarget{class_tessellation_a9280b338ed41af0ec33e81391e76f82a}{}\index{Tessellation@{Tessellation}!get\+Width@{get\+Width}}
+\index{get\+Width@{get\+Width}!Tessellation@{Tessellation}}
+\subsubsection[{get\+Width}]{\setlength{\rightskip}{0pt plus 5cm}int Tessellation\+::get\+Width (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_tessellation_a9280b338ed41af0ec33e81391e76f82a}
+
+
+Getter for the tesseltation width. 
+
+\begin{DoxyReturn}{Returns}
+tesselation width 
+\end{DoxyReturn}
+\hypertarget{class_tessellation_a57273ef613b239b6e16ea97085d2f4df}{}\index{Tessellation@{Tessellation}!set\+Height@{set\+Height}}
+\index{set\+Height@{set\+Height}!Tessellation@{Tessellation}}
+\subsubsection[{set\+Height}]{\setlength{\rightskip}{0pt plus 5cm}void Tessellation\+::set\+Height (
+\begin{DoxyParamCaption}
+\item[{int}]{h}
+\end{DoxyParamCaption}
+)}\label{class_tessellation_a57273ef613b239b6e16ea97085d2f4df}
+
+
+Setter for the tesselation height. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em h} & tessellation height \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_tessellation_a4ee5bac93c53b25ff1d4ec8a43fdad64}{}\index{Tessellation@{Tessellation}!set\+Rotation@{set\+Rotation}}
+\index{set\+Rotation@{set\+Rotation}!Tessellation@{Tessellation}}
+\subsubsection[{set\+Rotation}]{\setlength{\rightskip}{0pt plus 5cm}void Tessellation\+::set\+Rotation (
+\begin{DoxyParamCaption}
+\item[{int}]{r}
+\end{DoxyParamCaption}
+)}\label{class_tessellation_a4ee5bac93c53b25ff1d4ec8a43fdad64}
+
+
+Setter for the tesselation rotation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & tessellation rotation \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_tessellation_aa035a163e76a1616c58d20938b2853aa}{}\index{Tessellation@{Tessellation}!set\+Width@{set\+Width}}
+\index{set\+Width@{set\+Width}!Tessellation@{Tessellation}}
+\subsubsection[{set\+Width}]{\setlength{\rightskip}{0pt plus 5cm}void Tessellation\+::set\+Width (
+\begin{DoxyParamCaption}
+\item[{int}]{w}
+\end{DoxyParamCaption}
+)}\label{class_tessellation_aa035a163e76a1616c58d20938b2853aa}
+
+
+Setter for the tesselation width. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em w} & tessellation width \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_tessellation_a94b9f62e66d1b4e967483a7aea75b830}{}\index{Tessellation@{Tessellation}!height@{height}}
+\index{height@{height}!Tessellation@{Tessellation}}
+\subsubsection[{height}]{\setlength{\rightskip}{0pt plus 5cm}int Tessellation\+::height\hspace{0.3cm}{\ttfamily [private]}}\label{class_tessellation_a94b9f62e66d1b4e967483a7aea75b830}
+tesselation height / altura del mosaico \hypertarget{class_tessellation_ac09f5100d6f72ad8c4d4ff52268434ca}{}\index{Tessellation@{Tessellation}!rotation@{rotation}}
+\index{rotation@{rotation}!Tessellation@{Tessellation}}
+\subsubsection[{rotation}]{\setlength{\rightskip}{0pt plus 5cm}int Tessellation\+::rotation\hspace{0.3cm}{\ttfamily [private]}}\label{class_tessellation_ac09f5100d6f72ad8c4d4ff52268434ca}
+tesselation rotation / rotacion del mosaico \hypertarget{class_tessellation_a943c56fd0f2e174add80b3bbeb11e74b}{}\index{Tessellation@{Tessellation}!width@{width}}
+\index{width@{width}!Tessellation@{Tessellation}}
+\subsubsection[{width}]{\setlength{\rightskip}{0pt plus 5cm}int Tessellation\+::width\hspace{0.3cm}{\ttfamily [private]}}\label{class_tessellation_a943c56fd0f2e174add80b3bbeb11e74b}
+tesselation width / ancho del mosaico 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+tessellation.\+h\item 
+tessellation.\+cpp\end{DoxyCompactItemize}

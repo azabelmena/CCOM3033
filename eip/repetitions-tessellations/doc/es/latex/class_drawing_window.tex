@@ -1,0 +1,147 @@
+\hypertarget{class_drawing_window}{}\section{Referencia de la Clase Drawing\+Window}
+\label{class_drawing_window}\index{Drawing\+Window@{Drawing\+Window}}
+
+
+{\ttfamily \#include $<$drawing\+Window.\+h$>$}
+
+Diagrama de herencias de Drawing\+Window\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_drawing_window}
+\end{center}
+\end{figure}
+\subsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_drawing_window_aff3d1b3cbeee8f0e92b49c050d8ca494}{}\hyperlink{class_drawing_window_aff3d1b3cbeee8f0e92b49c050d8ca494}{Drawing\+Window} (Q\+Widget $\ast$parent=0)\label{class_drawing_window_aff3d1b3cbeee8f0e92b49c050d8ca494}
+
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hypertarget{class_drawing_window_a0d07890a752adffee1f92a463561dcb6}{}\hyperlink{class_drawing_window_a0d07890a752adffee1f92a463561dcb6}{$\sim$\+Drawing\+Window} ()\label{class_drawing_window_a0d07890a752adffee1f92a463561dcb6}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \hyperlink{class_drawing_window_ac5a412fbb239f1f57cabe7a850e1e4fb}{add\+Tessellation} (\hyperlink{class_tessellation}{Tessellation} \&t)
+\begin{DoxyCompactList}\small\item\em Anade un mosaico a la ventana. \end{DoxyCompactList}\item 
+void \hyperlink{class_drawing_window_a3097e096223530c9f93737441d77422f}{add\+Line} (int x0, int y0, int x1, int y1, int width, Q\+Color color)
+\begin{DoxyCompactList}\small\item\em Anade una linea a la ventana, especificando las coordenadas de los puntos iniciales y finales. \end{DoxyCompactList}\item 
+void \hyperlink{class_drawing_window_ae03504caa7648347ec56eb58cf5b5db4}{add\+Line\+Polar} (int x0, int y0, int length, double angle, int width, Q\+Color color)
+\begin{DoxyCompactList}\small\item\em Anade una linea a la ventana, especifica las coordenadas de el punto inicial, el largo y el angulo. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Métodos protegidos}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_drawing_window_aceb9c5cc4f2ef40d99aca7d3fbd4e91a}{}void \hyperlink{class_drawing_window_aceb9c5cc4f2ef40d99aca7d3fbd4e91a}{paint\+Event} (Q\+Paint\+Event $\ast$)\label{class_drawing_window_aceb9c5cc4f2ef40d99aca7d3fbd4e91a}
+
+\begin{DoxyCompactList}\small\item\em Evento de pintar. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_drawing_window_ad58ced401c1eaf6cfaf67a0f8f94ce18}{}Ui\+::\+Drawing\+Window $\ast$ {\bfseries ui}\label{class_drawing_window_ad58ced401c1eaf6cfaf67a0f8f94ce18}
+
+\item 
+vector$<$ \hyperlink{class_tessellation}{Tessellation} $\ast$ $>$ $\ast$ \hyperlink{class_drawing_window_a00c917f0910ac7b70729d6a48f0602ac}{v\+T}
+\item 
+vector$<$ \hyperlink{class_tessellation}{Tessellation} $\ast$ $>$ $\ast$ \hyperlink{class_drawing_window_a82bd46efc8a35b62fcd207c42aa49ade}{my\+Tessellation}
+\item 
+vector$<$ \hyperlink{class_line}{Line} $\ast$ $>$ $\ast$ \hyperlink{class_drawing_window_a6e1effc34bb2f2c43becfd1df203b693}{v\+L}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+Una clase para crear una ventana de dibujos para dibujar mosaicos 
+
+\subsection{Documentación de las funciones miembro}
+\hypertarget{class_drawing_window_a3097e096223530c9f93737441d77422f}{}\index{Drawing\+Window@{Drawing\+Window}!add\+Line@{add\+Line}}
+\index{add\+Line@{add\+Line}!Drawing\+Window@{Drawing\+Window}}
+\subsubsection[{add\+Line}]{\setlength{\rightskip}{0pt plus 5cm}void Drawing\+Window\+::add\+Line (
+\begin{DoxyParamCaption}
+\item[{int}]{x0, }
+\item[{int}]{y0, }
+\item[{int}]{x1, }
+\item[{int}]{y1, }
+\item[{int}]{width, }
+\item[{Q\+Color}]{color}
+\end{DoxyParamCaption}
+)}\label{class_drawing_window_a3097e096223530c9f93737441d77422f}
+
+
+Anade una linea a la ventana, especificando las coordenadas de los puntos iniciales y finales. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em x0} & coordenada inicial x \\
+\hline
+{\em y0} & coordenada inicial y \\
+\hline
+{\em x1} & coordenada final x \\
+\hline
+{\em y1} & coordenada final y \\
+\hline
+{\em width} & ancho de la linea \\
+\hline
+{\em color} & color de la linea \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_drawing_window_ae03504caa7648347ec56eb58cf5b5db4}{}\index{Drawing\+Window@{Drawing\+Window}!add\+Line\+Polar@{add\+Line\+Polar}}
+\index{add\+Line\+Polar@{add\+Line\+Polar}!Drawing\+Window@{Drawing\+Window}}
+\subsubsection[{add\+Line\+Polar}]{\setlength{\rightskip}{0pt plus 5cm}void Drawing\+Window\+::add\+Line\+Polar (
+\begin{DoxyParamCaption}
+\item[{int}]{x0, }
+\item[{int}]{y0, }
+\item[{int}]{length, }
+\item[{double}]{angle, }
+\item[{int}]{width, }
+\item[{Q\+Color}]{color}
+\end{DoxyParamCaption}
+)}\label{class_drawing_window_ae03504caa7648347ec56eb58cf5b5db4}
+
+
+Anade una linea a la ventana, especifica las coordenadas de el punto inicial, el largo y el angulo. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em x0} & coordenada inicial x \\
+\hline
+{\em y0} & coordenada inicial y \\
+\hline
+{\em length} & -\/ largo de la linea \\
+\hline
+{\em angle} & -\/ angulo de la linea \\
+\hline
+{\em width} & -\/ ancho de la linea \\
+\hline
+{\em color} & -\/ color de la linea \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_drawing_window_ac5a412fbb239f1f57cabe7a850e1e4fb}{}\index{Drawing\+Window@{Drawing\+Window}!add\+Tessellation@{add\+Tessellation}}
+\index{add\+Tessellation@{add\+Tessellation}!Drawing\+Window@{Drawing\+Window}}
+\subsubsection[{add\+Tessellation}]{\setlength{\rightskip}{0pt plus 5cm}void Drawing\+Window\+::add\+Tessellation (
+\begin{DoxyParamCaption}
+\item[{{\bf Tessellation} \&}]{t}
+\end{DoxyParamCaption}
+)}\label{class_drawing_window_ac5a412fbb239f1f57cabe7a850e1e4fb}
+
+
+Anade un mosaico a la ventana. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em t} & un objeto de tipo tessellation (mosaico) \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Documentación de los datos miembro}
+\hypertarget{class_drawing_window_a82bd46efc8a35b62fcd207c42aa49ade}{}\index{Drawing\+Window@{Drawing\+Window}!my\+Tessellation@{my\+Tessellation}}
+\index{my\+Tessellation@{my\+Tessellation}!Drawing\+Window@{Drawing\+Window}}
+\subsubsection[{my\+Tessellation}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf Tessellation} $\ast$$>$$\ast$ Drawing\+Window\+::my\+Tessellation\hspace{0.3cm}{\ttfamily [private]}}\label{class_drawing_window_a82bd46efc8a35b62fcd207c42aa49ade}
+vector of tesselation / vector de mosaicos \hypertarget{class_drawing_window_a6e1effc34bb2f2c43becfd1df203b693}{}\index{Drawing\+Window@{Drawing\+Window}!v\+L@{v\+L}}
+\index{v\+L@{v\+L}!Drawing\+Window@{Drawing\+Window}}
+\subsubsection[{v\+L}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf Line} $\ast$$>$$\ast$ Drawing\+Window\+::v\+L\hspace{0.3cm}{\ttfamily [private]}}\label{class_drawing_window_a6e1effc34bb2f2c43becfd1df203b693}
+vector of line / vector de lineas \hypertarget{class_drawing_window_a00c917f0910ac7b70729d6a48f0602ac}{}\index{Drawing\+Window@{Drawing\+Window}!v\+T@{v\+T}}
+\index{v\+T@{v\+T}!Drawing\+Window@{Drawing\+Window}}
+\subsubsection[{v\+T}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf Tessellation}$\ast$ $>$$\ast$ Drawing\+Window\+::v\+T\hspace{0.3cm}{\ttfamily [private]}}\label{class_drawing_window_a00c917f0910ac7b70729d6a48f0602ac}
+vector of tesselation / vector de mosaicos 
+
+La documentación para esta clase fue generada a partir de los siguientes ficheros\+:\begin{DoxyCompactItemize}
+\item 
+drawing\+Window.\+h\item 
+drawing\+Window.\+cpp\end{DoxyCompactItemize}

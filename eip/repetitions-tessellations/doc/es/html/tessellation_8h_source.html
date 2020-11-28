@@ -1,0 +1,144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9.1"/>
+<title>My Project: Fichero Fuente tessellation.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.9.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li><a href="annotated.html"><span>Clases</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;archivos</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">tessellation.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef TESSELATION_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define TESSELATION_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;QWidget&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;QPainter&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_tessellation.html">   11</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_tessellation.html">Tessellation</a> : <span class="keyword">public</span> QWidget</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;{</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    Q_OBJECT</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="class_tessellation.html#a3d77f5ad7aa19936ab47b43b7251526f">Tessellation</a>(QWidget *parent = 0);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_tessellation.html#a7d911890db50eb39146c1ec2d771a7dd">getRotation</a>();</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_tessellation.html#a9280b338ed41af0ec33e81391e76f82a">getWidth</a>();</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_tessellation.html#a5fbfd2325a4ba0b7d4e66ce98e474c56">getHeight</a>();</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_tessellation.html#a4ee5bac93c53b25ff1d4ec8a43fdad64">setRotation</a>(<span class="keywordtype">int</span> r);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_tessellation.html#aa035a163e76a1616c58d20938b2853aa">setWidth</a>(<span class="keywordtype">int</span> w);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_tessellation.html#a57273ef613b239b6e16ea97085d2f4df">setHeight</a>(<span class="keywordtype">int</span> h);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;signals:</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="keyword">public</span> slots:</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_tessellation.html#aed2d64951d5d8b7e4fefde70c072b7c1">paintEvent</a>(QPaintEvent *);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="class_tessellation.html#ac09f5100d6f72ad8c4d4ff52268434ca">   95</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_tessellation.html#ac09f5100d6f72ad8c4d4ff52268434ca">rotation</a>; </div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="class_tessellation.html#a943c56fd0f2e174add80b3bbeb11e74b">   96</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_tessellation.html#a943c56fd0f2e174add80b3bbeb11e74b">width</a>,    </div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <a class="code" href="class_tessellation.html#a94b9f62e66d1b4e967483a7aea75b830">height</a>;       </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;};</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="preprocessor">#endif // TESSELATION_H</span></div>
+<div class="ttc" id="class_tessellation_html_aa035a163e76a1616c58d20938b2853aa"><div class="ttname"><a href="class_tessellation.html#aa035a163e76a1616c58d20938b2853aa">Tessellation::setWidth</a></div><div class="ttdeci">void setWidth(int w)</div><div class="ttdoc">Ajusta el ancho del mosaico. </div><div class="ttdef"><b>Definition:</b> tessellation.cpp:66</div></div>
+<div class="ttc" id="class_tessellation_html_a4ee5bac93c53b25ff1d4ec8a43fdad64"><div class="ttname"><a href="class_tessellation.html#a4ee5bac93c53b25ff1d4ec8a43fdad64">Tessellation::setRotation</a></div><div class="ttdeci">void setRotation(int r)</div><div class="ttdoc">Ajusta la rotacion del mosaico. </div><div class="ttdef"><b>Definition:</b> tessellation.cpp:57</div></div>
+<div class="ttc" id="class_tessellation_html_a94b9f62e66d1b4e967483a7aea75b830"><div class="ttname"><a href="class_tessellation.html#a94b9f62e66d1b4e967483a7aea75b830">Tessellation::height</a></div><div class="ttdeci">int height</div><div class="ttdef"><b>Definition:</b> tessellation.h:96</div></div>
+<div class="ttc" id="class_tessellation_html_aed2d64951d5d8b7e4fefde70c072b7c1"><div class="ttname"><a href="class_tessellation.html#aed2d64951d5d8b7e4fefde70c072b7c1">Tessellation::paintEvent</a></div><div class="ttdeci">void paintEvent(QPaintEvent *)</div><div class="ttdoc">Pinta un mosaico en la pantalla cada ves que ocurre un evento de pintar. </div><div class="ttdef"><b>Definition:</b> tessellation.cpp:86</div></div>
+<div class="ttc" id="class_tessellation_html"><div class="ttname"><a href="class_tessellation.html">Tessellation</a></div><div class="ttdef"><b>Definition:</b> tessellation.h:11</div></div>
+<div class="ttc" id="class_tessellation_html_ac09f5100d6f72ad8c4d4ff52268434ca"><div class="ttname"><a href="class_tessellation.html#ac09f5100d6f72ad8c4d4ff52268434ca">Tessellation::rotation</a></div><div class="ttdeci">int rotation</div><div class="ttdef"><b>Definition:</b> tessellation.h:95</div></div>
+<div class="ttc" id="class_tessellation_html_a57273ef613b239b6e16ea97085d2f4df"><div class="ttname"><a href="class_tessellation.html#a57273ef613b239b6e16ea97085d2f4df">Tessellation::setHeight</a></div><div class="ttdeci">void setHeight(int h)</div><div class="ttdoc">Ajusta la altura del mosaico. </div><div class="ttdef"><b>Definition:</b> tessellation.cpp:76</div></div>
+<div class="ttc" id="class_tessellation_html_a943c56fd0f2e174add80b3bbeb11e74b"><div class="ttname"><a href="class_tessellation.html#a943c56fd0f2e174add80b3bbeb11e74b">Tessellation::width</a></div><div class="ttdeci">int width</div><div class="ttdef"><b>Definition:</b> tessellation.h:96</div></div>
+<div class="ttc" id="class_tessellation_html_a5fbfd2325a4ba0b7d4e66ce98e474c56"><div class="ttname"><a href="class_tessellation.html#a5fbfd2325a4ba0b7d4e66ce98e474c56">Tessellation::getHeight</a></div><div class="ttdeci">int getHeight()</div><div class="ttdoc">Devuelve la altura del mosaico. </div><div class="ttdef"><b>Definition:</b> tessellation.cpp:47</div></div>
+<div class="ttc" id="class_tessellation_html_a3d77f5ad7aa19936ab47b43b7251526f"><div class="ttname"><a href="class_tessellation.html#a3d77f5ad7aa19936ab47b43b7251526f">Tessellation::Tessellation</a></div><div class="ttdeci">Tessellation(QWidget *parent=0)</div><div class="ttdoc">Constructor. Crea un mosaico como este:  </div><div class="ttdef"><b>Definition:</b> tessellation.cpp:12</div></div>
+<div class="ttc" id="class_tessellation_html_a9280b338ed41af0ec33e81391e76f82a"><div class="ttname"><a href="class_tessellation.html#a9280b338ed41af0ec33e81391e76f82a">Tessellation::getWidth</a></div><div class="ttdeci">int getWidth()</div><div class="ttdoc">Devuelve el ancho del mosaico. </div><div class="ttdef"><b>Definition:</b> tessellation.cpp:38</div></div>
+<div class="ttc" id="class_tessellation_html_a7d911890db50eb39146c1ec2d771a7dd"><div class="ttname"><a href="class_tessellation.html#a7d911890db50eb39146c1ec2d771a7dd">Tessellation::getRotation</a></div><div class="ttdeci">int getRotation()</div><div class="ttdoc">Devuelve la rotacion. </div><div class="ttdef"><b>Definition:</b> tessellation.cpp:29</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado el Miércoles, 10 de Junio de 2015 09:57:56 para My Project por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9.1
+</small></address>
+</body>
+</html>
