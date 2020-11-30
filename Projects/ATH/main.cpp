@@ -10,7 +10,20 @@ Created by: Alec Zabel-Mena.
 #include<fstream>
 #include<cstdlib>
 #include<ctime>
+//#include"athFunc.h"
 using namespace std;
+
+struct AthInfo{
+    string bankName;
+    string accNo; 
+    string name; 
+    string socSec; 
+    string pinFile;
+
+    double initBalance;
+    double currentBalance;
+
+};
  
 //--------- function declerations --------------------------------------------
 bool openRead(ifstream&, string = "userInfo.txt"); //opens the ifstream object
@@ -70,9 +83,6 @@ int main(){
 
     initBalance = readBalance(readUserInfo); // read the initial balance and
             // store it in a string.
-
-
-
 
     closeRead(readUserInfo); // close the file from reading.
 //---------------------------------------------------------------------------
@@ -296,9 +306,6 @@ void writeHeader(ofstream& write, string& account, string& curTime, double& bala
     unsigned athNo = 100+rand()%500; // randomly generate an ATH number.
 
     // write the header for the transaction reciept and format it.
-    write<< "\nTransaction info for accont no " << account << " On ATH no. "
-         << athNo << curTime <<endl;
-    write<< "Initial Balance: $" << balance <<endl;
     write<< "TRANSACTION" <<setw(15)<< "AMMOUNT" <<setw(15)<< "BALANCE" <<setw(15)
          << "DATE" <<endl;
 }

@@ -116,3 +116,6 @@ Deposit:              10            430     Sat Oct 31 12:22:18 2020
 
 Withdrawal:             20            410     Sat Oct 31 12:22:18 2020
 
+Initial Balance: $420
+TRANSACTION        AMMOUNT        BALANCE           DATE
+TRANSACTION        AMMOUNT        BALANCE           DATE
