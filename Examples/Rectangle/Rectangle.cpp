@@ -3,6 +3,12 @@
 #include"Rectangle.h" // includes the Rectangle class.
 using namespace std;
 
+Rectangle::Rectangle(){
+    width = 0;
+    length = 0;
+}
+
+
 void Rectangle::setWidth(double w){
     if(w >= 0){
         width = w;
