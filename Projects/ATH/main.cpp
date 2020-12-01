@@ -22,7 +22,6 @@ struct AthInfo{
 
     double initBalance;
     double currentBalance;
-
 };
  
 //--------- function declerations --------------------------------------------

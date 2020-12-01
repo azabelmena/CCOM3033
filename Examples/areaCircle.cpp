@@ -22,17 +22,17 @@ double square(double);
  * Function definitions
  * */
 double getRadius(){
-    double rad; the radius variable.
+    double rad; //the radius variable
 
-    cout<< "Enter the radius for the circle: "; ask the user to enter the circle
-        cin>> rad;                               radius.
+    cout<< "Enter the radius for the circle: "; //ask the user to enter the circle
+        cin>> rad;                               //radius.
 
     return rad;
 }
 
 double square(double rad){
-    double square = rad*rad; square the argument and store it in the variable 
-                              sqaure.
+    double square = rad*rad; //square the argument and store it in the variable 
+                              //sqaure.
 
     return square;
 }
@@ -41,14 +41,14 @@ int main(){
     const double PI = 3.1415926;
     double radius, area;
 
-    cout<<fixed<<showpoint<<setprecision(2); set the formatting
+    cout<<fixed<<showpoint<<setprecision(2); //set the formatting
 
     cout<< "This function calculates the area of a circle." <<endl;
     
-    radius = getRadius(); get the radius and store it.
-    area = PI*square(radius); calculate the area.
+    radius = getRadius(); //get the radius and store it.
+    area = PI*square(radius); //calculate the area.
 
-    cout<< "The area of your circle is: " << area <<endl; display the area.
+    cout<< "The area of your circle is: " << area <<endl; //display the area.
 
     return 0;
 }

@@ -9,6 +9,13 @@ Created by: Alec Zabel-Mena.
 #include<string>
 using namespace std;
 
+struct Student{
+    string name;
+    double* grades;
+    double gpa;
+    int ingreso;
+};
+
 struct Clase{ // Create the clases struct
     int codigoClase; // with class code memeber
     string nombreClase; // and class name member
