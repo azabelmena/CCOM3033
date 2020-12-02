@@ -34,6 +34,21 @@ class Validation{ //done
         }
 };
 
+class Read{
+    public:
+        bool open(std::ifstream&, std::string);
+        void close(std::ifstream&);
+        void read(std::ifstream&,std::string&, std::string&, std::string&, std::string&, std::string&, double&);
+};
+
+class Write{
+    public:
+        bool open(std::ofstream&, std::string);
+        void close(std::ofstream&);
+        void setHeader(std::ofstream&);
+        void write(std::ofstream&, std::string, std::string&, double&, double&, unsigned&);
+};
+
 class Menu{ //done
     public:
         Menu(){
@@ -53,5 +68,31 @@ class Transaction{
         double withdraw(double&);
         void checkBal(double&);
 };
+
+//class Search{
+    //public:
+        //std::string lookFor();
+        //void search(std::string, std::vector<std::string>&, std::vector<int>&);
+        //void printFound(std::vector<int>&, std::vector<int>&, std::vector<std::string>&, std::vector<double>&, std::vector<double>&, std::vector<std::string>&);
+//};
+
+struct Account{
+    std::string bankName;
+    std::string accNo;
+    std::string name;
+    std::string socSec;
+    std::string userPin;
+    double initBalance;
+    double currentBalance;
+};
+
+struct TRANSACTION{
+    int athNo;
+    std::string transaction;
+    double ammount;
+    double balance;
+    std::string date;
+};
+
  
 #endif
