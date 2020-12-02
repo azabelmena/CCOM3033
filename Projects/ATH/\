@@ -46,6 +46,22 @@ class Menu{ //done
         }
 };
 
+class Read{
+    public:
+        bool open(std::ifstream&, std::string);
+        void close(std::ifstream);
+        Read(std::ifstream& read, std::string account, std::string name, std::string socSec, std::string pin, double initBalance){
+            std::string accountNo, userName, first, last, socialSec, pinNum, userBalance;
+            
+            read>> accountNo >> account;
+            read>> userName >> first >> last;
+            name = first+last;
+            read>> socialSec >> socSec;
+            read>> pinNum >> pin;
+            read>> userBalance >> initBalance;
+        }
+};
+
 class Transaction{
     public:
         double depositCash();
