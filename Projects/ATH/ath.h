@@ -1,6 +1,25 @@
 #ifndef ATH_H
 #define ATH_H
 
+struct Account{
+    std::string bankName;
+    std::string accNo;
+    std::string name;
+    std::string socSec;
+    std::string userPin;
+    double initBalance;
+    double currentBalance;
+};
+
+struct TransactionInfo{
+    unsigned athNo;
+    std::string transaction;
+    double ammount;
+    double balance;
+    std::string date;
+};
+
+
 class Validation{ //done
     public:
         Validation(std::string& pinNum){
@@ -40,7 +59,7 @@ class Read{
         void close(std::ifstream&);
         void read(std::ifstream&,std::string&, std::string&, std::string&, std::string&, std::string&, double&);
         void read(std::ifstream&,std::string&, std::string&, std::string&, std::string&, std::string&, double&,double&);
-
+        std::vector<TransactionInfo> read(std::ifstream& readFile,TransactionInfo, std::vector<TransactionInfo>);
 };
 
 class Write{
@@ -48,9 +67,9 @@ class Write{
         bool open(std::ofstream&, std::string);
         void close(std::ofstream&);
         void setHeader(std::ofstream&);
+        void setHeader();
         void write(std::ofstream&, double);
         void write(std::ofstream&, std::string, std::string&, double&, double&, unsigned&);
-
 };
 
 class Menu{ //done
@@ -59,7 +78,7 @@ class Menu{ //done
             std::cout<< "Press 0 to exit." <<std::endl;
             std::cout<< "Press 1 for deposits." <<std::endl;
             std::cout<< "Press 2 for withdrwawals." <<std::endl;
-            std::cout<< "Press 3 for an audit." <<std::endl;
+            std::cout<< "Press 3 for a Balance Check." <<std::endl;
             std::cout<< "Press 4 to search for a transaction." <<std::endl;
 
         }
@@ -73,30 +92,11 @@ class Transaction{
         void checkBal(double&);
 };
 
-//class Search{
-    //public:
-        //std::string lookFor();
-        //void search(std::string, std::vector<std::string>&, std::vector<int>&);
-        //void printFound(std::vector<int>&, std::vector<int>&, std::vector<std::string>&, std::vector<double>&, std::vector<double>&, std::vector<std::string>&);
-//};
 
-struct Account{
-    std::string bankName;
-    std::string accNo;
-    std::string name;
-    std::string socSec;
-    std::string userPin;
-    double initBalance;
-    double currentBalance;
+class Search{
+    public:
+        std::string lookFor();
+        void search(std::string, std::vector<TransactionInfo>, std::vector<int>);
 };
-
-struct TRANSACTION{
-    int athNo;
-    std::string transaction;
-    double ammount;
-    double balance;
-    std::string date;
-};
-
  
 #endif

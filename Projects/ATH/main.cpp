@@ -7,6 +7,7 @@ Created by: Alec Zabel-Mena.
 */
 #include<iostream>
 #include<iomanip>
+#include<vector>
 #include<fstream>
 #include<cstdlib>
 #include<ctime>
@@ -18,26 +19,32 @@ int main(int argc, const char* argv[]){
 //---------------- variables ------------------------------------------------
     time_t current = time(0); //get the system time.
     string currentTime = ctime(&current); //convert the system time into a
+
+    srand(current); // seed the random number generator for athNo.
                                             //string.
     unsigned athNo = 100+rand()%500; // randomly generate an ATH number.
 
     Read inFile;
     Write outFile;
 
-    Account account;
+    TransactionInfo transactionInfo;
+    Search searchTransaction;
 
+    Account account;
     Transaction transaction;
-    
+
     int userChoice, choice, yesNo; //set the choices that the user will be making.
     int cashOrCheck; // The user choice for if they wish to deposit cash or a check.
     
     double userDeposit, userWithdrawal, userCheck; // set the variables for the
                            // deposit, withdrawal, and the balance check.
-                           //
+
+    vector<TransactionInfo> transactions;
+
 //---------------------------------------------------------------------------
 //---------------- read the relavant info -----------------------------------
     ifstream readUserInfo; // the ifstream object.
-    ofstream writeUserInfo, writeActual; // the ofstream object.
+    ofstream writeUserInfo; // the ofstream object.
 
     inFile.open(readUserInfo, "userInfo.txt");
 
@@ -46,18 +53,21 @@ int main(int argc, const char* argv[]){
 
 //---------------- vaildate the pin, and open file for writing -----------------------------------------
 
+    
     cout<< "Weclome to the " << account.bankName<< "." <<endl;
 
     Validation validatePin(account.userPin);
 
     outFile.open(writeUserInfo, "userInfo.txt");
-    outFile.open(writeActual, "userInfo.txt");
+
+    account.currentBalance = account.initBalance;
 
     if(readUserInfo.eof()){
-        account.currentBalance = account.initBalance;
-        writeUserInfo<< "Act_Balance:\t" << account.currentBalance <<endl;
         outFile.setHeader(writeUserInfo);
     }
+
+    transactions = inFile.read(readUserInfo,transactionInfo, transactions);
+
 //-------------- ATH algorithm ----------------------------------------------
     cout<< "Welcome " << account.name << ". "
         << "Please enter one of the following:" <<endl;
@@ -86,6 +96,9 @@ int main(int argc, const char* argv[]){
                 account.currentBalance += userDeposit;
             }
 
+            transactionInfo = {athNo, "Deposit", userDeposit, account.currentBalance, currentTime};
+            transactions.push_back(transactionInfo);
+
             outFile.write(writeUserInfo, "Deposit", currentTime, userDeposit, account.currentBalance, athNo);
 
             cout<< "You have deposited $"<< userDeposit <<" into your account. \n"
@@ -110,7 +123,11 @@ int main(int argc, const char* argv[]){
             userWithdrawal = transaction.withdraw(account.currentBalance);
             account.currentBalance -= userWithdrawal;
 
-            outFile.write(writeUserInfo, "Withdrawal", currentTime, userDeposit, account.currentBalance, athNo);
+            transactionInfo = {athNo, "Withdrawal", userDeposit, account.currentBalance, currentTime};
+            transactions.push_back(transactionInfo);
+
+
+            outFile.write(writeUserInfo, "Withdrawal", currentTime, userWithdrawal, account.currentBalance, athNo);
             cout<< "You have withdrawn $"<< userWithdrawal <<" into your account. \n"
                 << "Your current balance is: " << account.currentBalance << ".\n"
                 << "Do you wish to continue? Enter 0 to exit or 1 to continue." <<endl;
@@ -132,7 +149,10 @@ int main(int argc, const char* argv[]){
         else if(userChoice == 3){
             transaction.checkBal(account.currentBalance);
 
-            outFile.write(writeUserInfo, "Balance Check", currentTime, account.currentBalance, account.currentBalance, athNo);
+            transactionInfo = {athNo, "Balance_Check", userDeposit, account.currentBalance, currentTime};
+            transactions.push_back(transactionInfo);
+
+            outFile.write(writeUserInfo, "Balance_Check", currentTime, account.currentBalance, account.currentBalance, athNo);
 
             cout<< "Do you wish to continue? Enter 0 to exit or 1 to continue." <<endl;
                 cin>> yesNo;
@@ -151,7 +171,27 @@ int main(int argc, const char* argv[]){
            }
         }
         else if(userChoice == 4){
-            cout<< "Under Maintenence." <<endl; // Implement search here!!!
+            string searchTerm = searchTransaction.lookFor();
+            vector<int> index;
+
+            outFile.setHeader();
+            searchTransaction.search(searchTerm, transactions, index);
+
+            cout<< "Do you wish to continue? Enter 0 to exit or 1 to continue." <<endl;
+                cin>> yesNo;
+
+           while(yesNo != 0 && yesNo != 1){
+            cout<< "Enter 0 to exit or 1 to continue." <<endl;
+                cin>> yesNo;
+           }
+
+           if(yesNo){
+               displayMenu;
+           }
+           else{
+                cout<< "Exiting. Have a nice day!" <<endl;
+                userChoice = 0;
+           }
         }
         else{
             if(userChoice){
@@ -163,9 +203,13 @@ int main(int argc, const char* argv[]){
         }
     }while(userChoice != 0);
 
+    //writeUserInfo.clear();
+    //writeUserInfo.seekp(130l, ios::beg);
+    //writeUserInfo<< account.currentBalance<<endl;
+    //cout<< writeUserInfo.tellp()<<endl;
+
     outFile.close(writeUserInfo); // close the file from writing.
     inFile.close(readUserInfo); // close the file from reading.
-
 
     return 0;
 }

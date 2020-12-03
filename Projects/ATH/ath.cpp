@@ -40,19 +40,28 @@ void Read::read(ifstream& read, string& bankName, string& account, string& name,
    read>>empty;
 }
 
-void Read::read(ifstream& read, string& bankName, string& account, string& name, string& socSec, string& pin, double& initBalance, double& currentBalance){
-   string accountNo, userName, first, last, socialSec, pinNum, userBalance, curBal; // these are 
-                // place holder variables.
+vector<TransactionInfo> Read::read(ifstream& readFile,TransactionInfo transactionInfo, vector<TransactionInfo> transactions){ 
+    unsigned atm; //declare an atm variable.
+    string trans, fecha; // declare transaction and date variables.
+    double ammt, bal; // declare ammount and balance variables.
 
-   getline(read, bankName, '\n'); // get the bank's name.
+    string empty, header; // variables to store the empty line and the header.
 
-   read>> accountNo >> account; // read the account number
-   read>> userName >> first >> last; // read the first and the last name
-        name = first+" "+last; // concatenate the first and last name.
-   read>> socialSec >> socSec; // read the social security number.
-   read>> pinNum >> pin; // read the pin number (used for validation).
-   read>> userBalance >> initBalance;
-   read>> curBal;
+    getline(readFile, empty, '\n');
+    getline(readFile, header, '\n');
+
+    // while the readFile is not at the end of the file:
+   do{
+       readFile>> atm >> trans >> ammt >> bal; // read into the variables
+       getline(readFile, fecha, '\n'); // getline the date.
+
+       transactionInfo = {atm, trans, ammt, bal, fecha};
+
+       transactions.push_back(transactionInfo);
+
+   }while(readFile); 
+
+   return transactions;
 }
 
 
@@ -78,6 +87,12 @@ void Write::setHeader(ofstream& write){
     write<<"\nATH" << setw(15) << "TRANSACTION" <<setw(15)<< "AMMOUNT" <<setw(15)<< "BALANCE" <<setw(15)
          << "DATE" <<endl;
 }
+
+void Write::setHeader(){
+    cout<<"\nATH" << setw(15) << "TRANSACTION" <<setw(15)<< "AMMOUNT" <<setw(15)<< "BALANCE" <<setw(15)
+         << "DATE" <<endl;
+}
+
 
 void Write::write(ofstream& write, double balance){
     write<< balance; 
@@ -165,3 +180,53 @@ void Transaction::checkBal(double& bal){
 }
 
 
+
+string Search::lookFor(){
+    string transactionName; // store the user's input.
+
+    // ask the user which transaction they would like to look for.
+    cout<< "What transaction would you like to look for?\n"
+        << "Deposit\n" << "Withdrawal\n" << "Balance_Check\n";
+        cin>> transactionName;
+
+
+    // the following case handelling for the user input.
+    if(transactionName == "deposit" || transactionName == "DEPOSIT"){
+            transactionName = "Deposit";
+    }
+
+    if(transactionName == "withdrawal" || transactionName == "WITHDRAWAL"){
+            transactionName = "Withdrawal";
+    }
+
+    if(transactionName == "balance_check" || transactionName == "BALANCE_CHECK"){
+            transactionName = "Balance_Check";
+    }
+
+    // while the user enters anything other than the appropriate options, reprompt
+    // the user.
+    while(transactionName != "Deposit" && transactionName != "Withdrawal" && transactionName != "Balance_Check"){
+        cout<< "Please enter one of the following transactions \n" 
+            << "Deposit \n" << "Withdrawal\n" << "Balance_Check\n";
+            cin >>transactionName;
+    }
+
+    return transactionName; // return the user input.
+}
+void Search::search(string searchTerm, vector<TransactionInfo> transactionInfo, vector<int> index){
+    int first = 0, last = transactionInfo.size()-1; // set the first and last indices.
+
+    while(first <= last){ // while first <= last,
+        if(searchTerm == transactionInfo[first].transaction){ //if the user input matches the 
+            index.push_back(first); //vector element at index first, push first into the
+        }                           // index vector.
+
+        first++; // increment first.
+    }
+
+    for(int i = 0; i < index.size(); i++){
+        cout<< transactionInfo[index[i]].athNo << setw(15) << transactionInfo[index[i]].transaction << setw(15)
+            << transactionInfo[index[i]].ammount << setw(15) << transactionInfo[index[i]].balance << setw(22)
+            << transactionInfo[index[i]].date <<endl;
+    }
+}
