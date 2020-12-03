@@ -203,11 +203,6 @@ int main(int argc, const char* argv[]){
         }
     }while(userChoice != 0);
 
-    //writeUserInfo.clear();
-    //writeUserInfo.seekp(130l, ios::beg);
-    //writeUserInfo<< account.currentBalance<<endl;
-    //cout<< writeUserInfo.tellp()<<endl;
-
     outFile.close(writeUserInfo); // close the file from writing.
     inFile.close(readUserInfo); // close the file from reading.
 
