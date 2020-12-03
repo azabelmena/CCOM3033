@@ -25,7 +25,7 @@ void Read::close(ifstream& readFile){
 }
 
 void Read::read(ifstream& read, string& bankName, string& account, string& name, string& socSec, string& pin, double& balance){
-   string accountNo, userName, first, last, socialSec, pinNum, userBalance; // these are 
+   string accountNo, userName, first, last, socialSec, pinNum, userBalance, empty; // these are 
                 // place holder variables.
 
    getline(read, bankName, '\n'); // get the bank's name.
@@ -36,7 +36,25 @@ void Read::read(ifstream& read, string& bankName, string& account, string& name,
    read>> socialSec >> socSec; // read the social security number.
    read>> pinNum >> pin; // read the pin number (used for validation).
    read>> userBalance >> balance;
+
+   read>>empty;
 }
+
+void Read::read(ifstream& read, string& bankName, string& account, string& name, string& socSec, string& pin, double& initBalance, double& currentBalance){
+   string accountNo, userName, first, last, socialSec, pinNum, userBalance, curBal; // these are 
+                // place holder variables.
+
+   getline(read, bankName, '\n'); // get the bank's name.
+
+   read>> accountNo >> account; // read the account number
+   read>> userName >> first >> last; // read the first and the last name
+        name = first+" "+last; // concatenate the first and last name.
+   read>> socialSec >> socSec; // read the social security number.
+   read>> pinNum >> pin; // read the pin number (used for validation).
+   read>> userBalance >> initBalance;
+   read>> curBal;
+}
+
 
 bool Write::open(ofstream& writeFile, string filename){
     writeFile.open(filename, ios::app); // open the same file and append to it.
@@ -57,12 +75,16 @@ void Write::close(ofstream& writeFile){
 }
 
 void Write::setHeader(ofstream& write){
-    write<<"ATH" << setw(15) << "TRANSACTION" <<setw(15)<< "AMMOUNT" <<setw(15)<< "BALANCE" <<setw(15)
+    write<<"\nATH" << setw(15) << "TRANSACTION" <<setw(15)<< "AMMOUNT" <<setw(15)<< "BALANCE" <<setw(15)
          << "DATE" <<endl;
 }
 
+void Write::write(ofstream& write, double balance){
+    write<< balance; 
+}
+
 void Write::write(ofstream& write, string transaction, string& time, double& ammount, double& currentBalance, unsigned& ath){
-       write<< ath << setw(15) << transaction << setw(15) << ammount << setw(15) << currentBalance << setw(15) << time <<endl; 
+       write<< ath << setw(15) << transaction << setw(15) << ammount << setw(15) << currentBalance << setw(35) << time; 
 }
 
 

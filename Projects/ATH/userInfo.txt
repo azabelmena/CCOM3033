@@ -4,39 +4,3 @@ Name:           Alec Zabel-Mena
 Soc_Security:   420-69-6669
 PIN:            6969
 Init_Balance:   420.00
-ATH    TRANSACTION        AMMOUNT        BALANCE           DATE
-ATH    TRANSACTION        AMMOUNT        BALANCE           DATE
-483        deposit   4.94066e-324            420Wed Dec  2 15:29:49 2020
-
-483        deposit            500            920Wed Dec  2 15:29:49 2020
-
-483     Withdrawal             40            880Wed Dec  2 15:29:49 2020
-
-483        deposit            500            880Wed Dec  2 15:29:49 2020
-
-ATH    TRANSACTION        AMMOUNT        BALANCE           DATE
-ATH    TRANSACTION        AMMOUNT        BALANCE           DATE
-483     Withdrawal   6.90638e-310            420Wed Dec  2 15:44:10 2020
-
-483        deposit            133            553Wed Dec  2 15:44:10 2020
-
-483        deposit            133            533Wed Dec  2 15:44:10 2020
-
-483        deposit            133            493Wed Dec  2 15:44:10 2020
-
-483        deposit            500            993Wed Dec  2 15:44:10 2020
-
-483     Withdrawal             40            993Wed Dec  2 15:44:10 2020
-
-ATH    TRANSACTION        AMMOUNT        BALANCE           DATE
-483        deposit            500            920Wed Dec  2 15:47:18 2020
-
-483        deposit             30            950Wed Dec  2 15:47:18 2020
-
-483        deposit             30            920Wed Dec  2 15:47:18 2020
-
-483     Withdrawal             30            920Wed Dec  2 15:47:18 2020
-
-ATH    TRANSACTION        AMMOUNT        BALANCE           DATE
-ATH    TRANSACTION        AMMOUNT        BALANCE           DATE
-ATH    TRANSACTION        AMMOUNT        BALANCE           DATE

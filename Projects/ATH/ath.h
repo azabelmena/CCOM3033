@@ -39,6 +39,8 @@ class Read{
         bool open(std::ifstream&, std::string);
         void close(std::ifstream&);
         void read(std::ifstream&,std::string&, std::string&, std::string&, std::string&, std::string&, double&);
+        void read(std::ifstream&,std::string&, std::string&, std::string&, std::string&, std::string&, double&,double&);
+
 };
 
 class Write{
@@ -46,7 +48,9 @@ class Write{
         bool open(std::ofstream&, std::string);
         void close(std::ofstream&);
         void setHeader(std::ofstream&);
+        void write(std::ofstream&, double);
         void write(std::ofstream&, std::string, std::string&, double&, double&, unsigned&);
+
 };
 
 class Menu{ //done
