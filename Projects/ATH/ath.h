@@ -68,8 +68,10 @@ class Write{
         void close(std::ofstream&);
         void setHeader(std::ofstream&);
         void setHeader();
-        void write(std::ofstream&, double);
-        void write(std::ofstream&, std::string, std::string&, double&, double&, unsigned&);
+        void write(std::ofstream&, Account&);
+        void write(std::ofstream&, std::vector<TransactionInfo>);
+        
+
 };
 
 class Menu{ //done

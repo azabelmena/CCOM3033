@@ -62,10 +62,6 @@ int main(int argc, const char* argv[]){
 
     account.currentBalance = account.initBalance;
 
-    if(readUserInfo.eof()){
-        outFile.setHeader(writeUserInfo);
-    }
-
     transactions = inFile.read(readUserInfo,transactionInfo, transactions);
 
 //-------------- ATH algorithm ----------------------------------------------
@@ -99,8 +95,6 @@ int main(int argc, const char* argv[]){
             transactionInfo = {athNo, "Deposit", userDeposit, account.currentBalance, currentTime};
             transactions.push_back(transactionInfo);
 
-            outFile.write(writeUserInfo, "Deposit", currentTime, userDeposit, account.currentBalance, athNo);
-
             cout<< "You have deposited $"<< userDeposit <<" into your account. \n"
                 << "Your current balance is: " << account.currentBalance << ".\n"
                 << "Do you wish to continue? Enter 0 to exit or 1 to continue." <<endl;
@@ -123,11 +117,9 @@ int main(int argc, const char* argv[]){
             userWithdrawal = transaction.withdraw(account.currentBalance);
             account.currentBalance -= userWithdrawal;
 
-            transactionInfo = {athNo, "Withdrawal", userDeposit, account.currentBalance, currentTime};
+            transactionInfo = {athNo, "Withdrawal", userWithdrawal, account.currentBalance, currentTime};
             transactions.push_back(transactionInfo);
 
-
-            outFile.write(writeUserInfo, "Withdrawal", currentTime, userWithdrawal, account.currentBalance, athNo);
             cout<< "You have withdrawn $"<< userWithdrawal <<" into your account. \n"
                 << "Your current balance is: " << account.currentBalance << ".\n"
                 << "Do you wish to continue? Enter 0 to exit or 1 to continue." <<endl;
@@ -149,10 +141,8 @@ int main(int argc, const char* argv[]){
         else if(userChoice == 3){
             transaction.checkBal(account.currentBalance);
 
-            transactionInfo = {athNo, "Balance_Check", userDeposit, account.currentBalance, currentTime};
+            transactionInfo = {athNo, "Balance_Check", account.currentBalance, account.currentBalance, currentTime};
             transactions.push_back(transactionInfo);
-
-            outFile.write(writeUserInfo, "Balance_Check", currentTime, account.currentBalance, account.currentBalance, athNo);
 
             cout<< "Do you wish to continue? Enter 0 to exit or 1 to continue." <<endl;
                 cin>> yesNo;
@@ -202,6 +192,13 @@ int main(int argc, const char* argv[]){
             }
         }
     }while(userChoice != 0);
+
+    account.initBalance = account.currentBalance;
+
+    outFile.write(writeUserInfo, account);
+
+    outFile.setHeader(writeUserInfo);
+    outFile.write(writeUserInfo, transactions);
 
     outFile.close(writeUserInfo); // close the file from writing.
     inFile.close(readUserInfo); // close the file from reading.

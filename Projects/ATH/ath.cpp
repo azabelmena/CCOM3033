@@ -66,7 +66,7 @@ vector<TransactionInfo> Read::read(ifstream& readFile,TransactionInfo transactio
 
 
 bool Write::open(ofstream& writeFile, string filename){
-    writeFile.open(filename, ios::app); // open the same file and append to it.
+    writeFile.open(filename); // open the same file.
 
     if(writeFile.fail()){
         cout<< "Could not open file." <<endl;
@@ -94,12 +94,20 @@ void Write::setHeader(){
 }
 
 
-void Write::write(ofstream& write, double balance){
-    write<< balance; 
+void Write::write(ofstream& write, Account& account){
+    write<< account.bankName <<endl;
+    write<< "account_No:" << setw(15) << account.accNo <<endl;
+    write<< "Name:" << setw(27) << account.name <<endl;
+    write<< "Soc_Security:" << setw(15)<< account.socSec <<endl;
+    write<< "PIN:" << setw(17) << account.userPin <<endl;
+    write<< "Balance: "<< setw(12) << account.currentBalance <<endl;
 }
 
-void Write::write(ofstream& write, string transaction, string& time, double& ammount, double& currentBalance, unsigned& ath){
-       write<< ath << setw(15) << transaction << setw(15) << ammount << setw(15) << currentBalance << setw(35) << time; 
+void Write::write(ofstream& write, vector<TransactionInfo> transaction){
+       for(int i = 0; i < transaction.size() ; i++){
+           write<< transaction[i].athNo << setw(15) << transaction[i].transaction << setw(15) 
+               << transaction[i].ammount << setw(15) << transaction[i].balance << setw(30) << transaction[i].date<<endl;
+       }
 }
 
 
@@ -226,7 +234,7 @@ void Search::search(string searchTerm, vector<TransactionInfo> transactionInfo, 
 
     for(int i = 0; i < index.size(); i++){
         cout<< transactionInfo[index[i]].athNo << setw(15) << transactionInfo[index[i]].transaction << setw(15)
-            << transactionInfo[index[i]].ammount << setw(15) << transactionInfo[index[i]].balance << setw(22)
+            << transactionInfo[index[i]].ammount << setw(15) << transactionInfo[index[i]].balance << setw(30)
             << transactionInfo[index[i]].date <<endl;
     }
 }

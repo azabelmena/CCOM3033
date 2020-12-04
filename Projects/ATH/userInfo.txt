@@ -1,23 +1,23 @@
 Bank of UPR
-Account_No.     123456789
-Name:           Alec Zabel-Mena
-Soc_Security:   420-69-6669
-PIN:            6969
-Balance:        420.00
+account_No:      123456789
+Name:            Alec Zabel-Mena
+Soc_Security:    420-69-6669
+PIN:             6969
+Balance:       420.69
 
 ATH    TRANSACTION        AMMOUNT        BALANCE           DATE
-333  Balance Check            420            420          Thu Dec  3 08:55:41 2020
-481        Deposit           5000           5420          Thu Dec  3 08:55:53 2020
-422     Withdrawal             20            400          Thu Dec  3 09:38:22 2020
-422        Deposit           1444           1844          Thu Dec  3 09:38:22 2020
-422  Balance_Check           1844           1844          Thu Dec  3 09:38:22 2020
-422     Withdrawal             50           1794          Thu Dec  3 09:38:22 2020
-422        Deposit             40           1834          Thu Dec  3 09:38:22 2020
-325        Deposit            500            920          Thu Dec  3 10:04:33 2020
-438        Deposit           5000           5420          Thu Dec  3 10:05:51 2020
-438     Withdrawal             20           5400          Thu Dec  3 10:05:51 2020
-438  Balance_Check           5400           5400          Thu Dec  3 10:05:51 2020
-218        Deposit           5000           5420          Thu Dec  3 11:05:25 2020
-218     Withdrawal            290           5130          Thu Dec  3 11:05:25 2020
-218  Balance_Check           5130           5130          Thu Dec  3 11:05:25 2020
-381        Deposit           5000           5420          Thu Dec  3 13:06:17 2020
+381        Deposit           5000           5420           Thu Dec  3 13:06:17 2020
+381        Deposit           5000           5420           Thu Dec  3 13:06:17 2020
+381        Deposit           5000           5420           Thu Dec  3 13:06:17 2020
+381        Deposit           5000           5420           Thu Dec  3 13:06:17 2020
+381        Deposit           5000           5420           Thu Dec  3 13:06:17 2020
+162        Deposit            500           5920           Fri Dec  4 00:50:29 2020
+162     Withdrawal             20           5900           Fri Dec  4 00:50:29 2020
+162  Balance_Check           5900           5900           Fri Dec  4 00:50:29 2020
+162  Balance_Check           5900           5900           Fri Dec  4 00:50:29 2020
+162  Balance_Check           5900           5900           Fri Dec  4 00:50:29 2020
+162  Balance_Check           5900           5900           Fri Dec  4 00:50:29 2020
+162  Balance_Check           5900           5900           Fri Dec  4 00:50:29 2020
+162  Balance_Check           5900           5900           Fri Dec  4 00:50:29 2020
+541     Withdrawal           5900              0           Fri Dec  4 01:00:55 2020
+541        Deposit         420.69         420.69           Fri Dec  4 01:00:55 2020
