@@ -1,7 +1,18 @@
 Banco Impopular Del Pueblo
 
-account_No:      1234567
-Name:            Lisa Gomez
+account_No:        1234567
+Name:                 Lisa Gomez
 Soc_Security:    123-45-6789
 PIN:             1234
 Balance:         1000
+
+ATH    TRANSACTION        AMMOUNT        BALANCE           DATE
+162  Balance_Check           5900           5900           Fri Dec  4 00:50:29 2020
+162  Balance_Check           5900           5900           Fri Dec  4 00:50:29 2020
+162  Balance_Check           5900           5900           Fri Dec  4 00:50:29 2020
+162  Balance_Check           5900           5900           Fri Dec  4 00:50:29 2020
+162  Balance_Check           5900           5900           Fri Dec  4 00:50:29 2020
+162  Balance_Check           5900           5900           Fri Dec  4 00:50:29 2020
+541     Withdrawal           5900              0           Fri Dec  4 01:00:55 2020
+541        Deposit         420.69         420.69           Fri Dec  4 01:00:55 2020
+541        Deposit         420.69         420.69           Fri Dec  4 01:00:55 2020

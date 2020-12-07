@@ -1,4 +1,4 @@
-#include<iostream>
+#include<iostream> // include the relevant header files.
 #include<iomanip>
 #include<fstream>
 #include<string>
@@ -6,7 +6,7 @@
 #include"ath.h"
 using namespace std;
 
-bool Read::open(ifstream& readFile, string filename){
+bool Read::open(ifstream& readFile, string filename){ //open the file for reading.
     readFile.open(filename); // open the file name
 
     if(readFile.fail()){ // if the file fails to open, set openRead to false.
@@ -19,11 +19,12 @@ bool Read::open(ifstream& readFile, string filename){
     }
 }
 
-void Read::close(ifstream& readFile){
+void Read::close(ifstream& readFile){ // close the file from reading.
     readFile.clear(); // clear the read buffer.
     readFile.close(); // close the file from readUserInfo.
 }
 
+// Read the user's account info from the file into the members of the Account struct account.
 void Read::read(ifstream& read, Account& account){
    string accountNo, userName, first, last, socialSec, pinNum, userBalance, empty; // these are 
                 // place holder variables.
@@ -40,7 +41,8 @@ void Read::read(ifstream& read, Account& account){
    read>>empty;
 }
 
-vector<TransactionInfo> Read::read(ifstream& readFile,TransactionInfo transactionInfo, vector<TransactionInfo> transactions){ 
+// Reads the transaction info into a vector of TransactionInfo structs.
+vector<TransactionInfo> Read::read(ifstream& readFile,TransactionInfo transactionInfo, vector<TransactionInfo> transactions){
     unsigned atm; //declare an atm variable.
     string trans, fecha; // declare transaction and date variables.
     double ammt, bal; // declare ammount and balance variables.
@@ -55,16 +57,17 @@ vector<TransactionInfo> Read::read(ifstream& readFile,TransactionInfo transactio
        readFile>> atm >> trans >> ammt >> bal; // read into the variables
        getline(readFile, fecha, '\n'); // getline the date.
 
-       transactionInfo = {atm, trans, ammt, bal, fecha};
+       transactionInfo = {atm, trans, ammt, bal, fecha}; // store the values into the struct.
 
-       transactions.push_back(transactionInfo);
+       transactions.push_back(transactionInfo); // push back into the vector.
 
-   }while(readFile); 
+   }while(readFile); // While the end of the file has not been reached. 
 
-   return transactions;
+   return transactions; // return the vector of TransactionInfo structs.
 }
 
 
+// Opens the file for writing (note this overwrites the entire file).
 bool Write::open(ofstream& writeFile, string filename){
     writeFile.open(filename); // open the same file.
 
@@ -78,22 +81,25 @@ bool Write::open(ofstream& writeFile, string filename){
     }
 }
 
-void Write::close(ofstream& writeFile){
+void Write::close(ofstream& writeFile){ // closes the file from writing.
     writeFile.clear(); //clear the write buffer.
     writeFile.close(); // close the file from writeUserInfo.
 }
 
+// Sets the transaction header to be written in the file.
 void Write::setHeader(ofstream& write){
     write<<"\nATH" << setw(15) << "TRANSACTION" <<setw(15)<< "AMMOUNT" <<setw(15)<< "BALANCE" <<setw(15)
          << "DATE" <<endl;
 }
 
-void Write::setHeader(){
+void Write::setHeader(){ //prints the transaction header on the screen.
     cout<<"\nATH" << setw(15) << "TRANSACTION" <<setw(15)<< "AMMOUNT" <<setw(15)<< "BALANCE" <<setw(15)
          << "DATE" <<endl;
 }
 
 
+// Writes the contents of the Account struct account into the file, used to 
+// recover data that has been overwritten.
 void Write::write(ofstream& write, Account& account){
     write<< account.bankName <<endl<<endl;
     write<< "account_No:" << setw(15) << account.accNo <<endl;
@@ -103,6 +109,8 @@ void Write::write(ofstream& write, Account& account){
     write<< "Balance: "<< setw(12) << account.currentBalance <<endl;
 }
 
+// Writes the contents of the vector of TransactionInfo structs, transaction into the file, used to 
+// recover data that has been overwritten.
 void Write::write(ofstream& write, vector<TransactionInfo> transaction){
        for(int i = 0; i < transaction.size() ; i++){
            write<< transaction[i].athNo << setw(15) << transaction[i].transaction << setw(15) 
@@ -110,7 +118,7 @@ void Write::write(ofstream& write, vector<TransactionInfo> transaction){
        }
 }
 
-
+//  the depositCash function.
 double Transaction::depositCash(){
     double deposit;
 
@@ -118,7 +126,7 @@ double Transaction::depositCash(){
     cout<< "How much would you like to deposit?" <<endl;
         cin>> deposit;
 
-    while(deposit-static_cast<int>(deposit)){
+    while(deposit-static_cast<int>(deposit)){ // Assure the user can only enter whole dollar ammounts.
         cout<< "Only whole dollar ammounts are accepted, please reenter the "
             << "desired ammount: ";
             cin>> deposit;
@@ -132,9 +140,11 @@ double Transaction::depositCash(){
             cin>> deposit;
     }
 
-    return deposit;
+    return deposit; // return the ammount deposited.
 }
 
+// The depositCheck function, the only difference is that this gives the 
+// user an upperbound of $5000 of how much they can deposit.
 double Transaction::depositCheck(){
     double deposit;
 
@@ -152,6 +162,9 @@ double Transaction::depositCheck(){
     return deposit;
 }
 
+// The withdraw function. Takes the user's balance as an argument, and 
+// stops the user from withdrawing anything higher than their current balance. Other than 
+// that, it withdraws dollar ammounts that are multiples of 10.
 double Transaction::withdraw(double& bal){
     double withdrawal;
 
@@ -180,15 +193,18 @@ double Transaction::withdraw(double& bal){
         }
     }
 
-    return withdrawal;
+    return withdrawal; //returns the amount withdrawn.
 }
 
+// The checkBal function, takes the user's current balance and prints it on 
+// the screen.
 void Transaction::checkBal(double& bal){
     cout<< "Your current balance is: " << bal << "." <<endl;
 }
 
-
-
+// The lookFor function, prompts the user to enter either:
+// "Depsoit", "Withdrawals", or "Balance_Check", and reprompts them if 
+// they enter anything else (with some exceptions).
 string Search::lookFor(){
     string transactionName; // store the user's input.
 
@@ -221,8 +237,13 @@ string Search::lookFor(){
 
     return transactionName; // return the user input.
 }
+
+// The searchFunction, takes as arguments the string returned by lookFor, a vector of
+// TransactionInfo structs, and an index vector. This program searches for the transaction that
+// matches the searchTerm string, and prints them (if any) on the screen. If none are found, it
+// simply says "no transactions found."
 void Search::search(string& searchTerm, vector<TransactionInfo>& transactionInfo, vector<int> index){
-    Write writeHeader;
+    Write writeHeader; // declare writeHeader to write the header.
     int first = 0, last = transactionInfo.size()-1; // set the first and last indices.
     bool found = false;
 
@@ -236,9 +257,9 @@ void Search::search(string& searchTerm, vector<TransactionInfo>& transactionInfo
         first++; // increment first.
     }
     
-    if(found){
-        writeHeader.setHeader();
-        for(int i = 0; i < index.size(); i++){
+    if(found){ // if found is true:
+        writeHeader.setHeader(); // print the header on the screen.
+        for(int i = 0; i < index.size(); i++){ // print the matching transactions.
             cout<< transactionInfo[index[i]].athNo << setw(15) << transactionInfo[index[i]].transaction << setw(15)
                 << transactionInfo[index[i]].ammount << setw(15) << transactionInfo[index[i]].balance << setw(30)
                 << transactionInfo[index[i]].date <<endl;
@@ -248,5 +269,4 @@ void Search::search(string& searchTerm, vector<TransactionInfo>& transactionInfo
     else{
         cout<< "Transactions not found." <<endl;
     }
-
 }
