@@ -1,11 +1,12 @@
-Bank of UPR
+Bannk of UPR
 account_No:      123456789
 Name:            Alec Zabel-Mena
 Soc_Security:    420-69-6669
 PIN:             6969
-Balance:       470.69
+Balance:       420.69
 
 ATH    TRANSACTION        AMMOUNT        BALANCE           DATE
+381        Deposit           5000           5420           Thu Dec  3 13:06:17 2020
 381        Deposit           5000           5420           Thu Dec  3 13:06:17 2020
 381        Deposit           5000           5420           Thu Dec  3 13:06:17 2020
 381        Deposit           5000           5420           Thu Dec  3 13:06:17 2020
@@ -20,6 +21,3 @@ ATH    TRANSACTION        AMMOUNT        BALANCE           DATE
 162  Balance_Check           5900           5900           Fri Dec  4 00:50:29 2020
 541     Withdrawal           5900              0           Fri Dec  4 01:00:55 2020
 541        Deposit         420.69         420.69           Fri Dec  4 01:00:55 2020
-541        Deposit         420.69         420.69           Fri Dec  4 01:00:55 2020
-237        Deposit             50         470.69     Mon Dec  7 12:59:10 2020
-
