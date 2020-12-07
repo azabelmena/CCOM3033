@@ -7,7 +7,6 @@ struct Account{
     std::string name;
     std::string socSec;
     std::string userPin;
-    double initBalance;
     double currentBalance;
 };
 
@@ -57,8 +56,7 @@ class Read{
     public:
         bool open(std::ifstream&, std::string);
         void close(std::ifstream&);
-        void read(std::ifstream&,std::string&, std::string&, std::string&, std::string&, std::string&, double&);
-        void read(std::ifstream&,std::string&, std::string&, std::string&, std::string&, std::string&, double&,double&);
+        void read(std::ifstream&, Account&);
         std::vector<TransactionInfo> read(std::ifstream& readFile,TransactionInfo, std::vector<TransactionInfo>);
 };
 

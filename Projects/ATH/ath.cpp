@@ -24,18 +24,18 @@ void Read::close(ifstream& readFile){
     readFile.close(); // close the file from readUserInfo.
 }
 
-void Read::read(ifstream& read, string& bankName, string& account, string& name, string& socSec, string& pin, double& balance){
+void Read::read(ifstream& read, Account& account){
    string accountNo, userName, first, last, socialSec, pinNum, userBalance, empty; // these are 
                 // place holder variables.
 
-   getline(read, bankName, '\n'); // get the bank's name.
+   getline(read, account.bankName, '\n'); // get the bank's name.
 
-   read>> accountNo >> account; // read the account number
+   read>> accountNo >> account.accNo; // read the account number
    read>> userName >> first >> last; // read the first and the last name
-        name = first+" "+last; // concatenate the first and last name.
-   read>> socialSec >> socSec; // read the social security number.
-   read>> pinNum >> pin; // read the pin number (used for validation).
-   read>> userBalance >> balance;
+        account.name = first+" "+last; // concatenate the first and last name.
+   read>> socialSec >> account.socSec; // read the social security number.
+   read>> pinNum >> account.userPin; // read the pin number (used for validation).
+   read>> userBalance >> account.currentBalance;
 
    read>>empty;
 }
@@ -95,7 +95,7 @@ void Write::setHeader(){
 
 
 void Write::write(ofstream& write, Account& account){
-    write<< account.bankName <<endl;
+    write<< account.bankName <<endl<<endl;
     write<< "account_No:" << setw(15) << account.accNo <<endl;
     write<< "Name:" << setw(27) << account.name <<endl;
     write<< "Soc_Security:" << setw(15)<< account.socSec <<endl;

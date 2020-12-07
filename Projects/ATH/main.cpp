@@ -44,9 +44,9 @@ int main(int argc, const char* argv[]){
     ifstream readUserInfo; // the ifstream object.
     ofstream writeUserInfo; // the ofstream object.
 
-    inFile.open(readUserInfo, "userInfo.txt");
+    inFile.open(readUserInfo, argv[1]);
 
-    inFile.read(readUserInfo, account.bankName, account.accNo, account.name, account.socSec, account.userPin, account.initBalance); // read the file data
+    inFile.read(readUserInfo, account); // read the file data
                 // into the appopriate variables.
 
 //---------------- vaildate the pin, and open file for writing -----------------------------------------
@@ -56,9 +56,7 @@ int main(int argc, const char* argv[]){
 
     Validation validatePin(account.userPin);
 
-    outFile.open(writeUserInfo, "userInfo.txt");
-
-    account.currentBalance = account.initBalance;
+    outFile.open(writeUserInfo, argv[1]);
 
     transactions = inFile.read(readUserInfo,transactionInfo, transactions);
 
@@ -190,8 +188,6 @@ int main(int argc, const char* argv[]){
             }
         }
     }while(userChoice != 0);
-
-    account.initBalance = account.currentBalance;
 
     outFile.write(writeUserInfo, account);
 
