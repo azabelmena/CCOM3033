@@ -6,4 +6,9 @@ PIN:             6969
 Balance:       420.69
 
 ATH    TRANSACTION        AMMOUNT        BALANCE           DATE
+364        Deposit           5000        5420.69     Mon Dec  7 15:42:55 2020
+
 0                             0              0                              
+0                             0              0                              
+312     Withdrawal             20         400.69     Mon Dec  7 15:46:59 2020
+
