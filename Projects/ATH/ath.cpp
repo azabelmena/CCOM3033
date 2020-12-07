@@ -221,20 +221,32 @@ string Search::lookFor(){
 
     return transactionName; // return the user input.
 }
-void Search::search(string searchTerm, vector<TransactionInfo> transactionInfo, vector<int> index){
+void Search::search(string& searchTerm, vector<TransactionInfo>& transactionInfo, vector<int> index){
+    Write writeHeader;
     int first = 0, last = transactionInfo.size()-1; // set the first and last indices.
+    bool found = false;
 
     while(first <= last){ // while first <= last,
         if(searchTerm == transactionInfo[first].transaction){ //if the user input matches the 
-            index.push_back(first); //vector element at index first, push first into the
-        }                           // index vector.
+            index.push_back(first); //vector element at index first, push first into the index
+            
+            found = true; // set found true.
+        }
 
         first++; // increment first.
     }
+    
+    if(found){
+        writeHeader.setHeader();
+        for(int i = 0; i < index.size(); i++){
+            cout<< transactionInfo[index[i]].athNo << setw(15) << transactionInfo[index[i]].transaction << setw(15)
+                << transactionInfo[index[i]].ammount << setw(15) << transactionInfo[index[i]].balance << setw(30)
+                << transactionInfo[index[i]].date <<endl;
+        }
 
-    for(int i = 0; i < index.size(); i++){
-        cout<< transactionInfo[index[i]].athNo << setw(15) << transactionInfo[index[i]].transaction << setw(15)
-            << transactionInfo[index[i]].ammount << setw(15) << transactionInfo[index[i]].balance << setw(30)
-            << transactionInfo[index[i]].date <<endl;
     }
+    else{
+        cout<< "Transactions not found." <<endl;
+    }
+
 }

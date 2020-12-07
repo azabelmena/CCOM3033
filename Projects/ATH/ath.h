@@ -96,7 +96,7 @@ class Transaction{
 class Search{
     public:
         std::string lookFor();
-        void search(std::string, std::vector<TransactionInfo>, std::vector<int>);
+        void search(std::string&, std::vector<TransactionInfo>&, std::vector<int>);
 };
  
 #endif

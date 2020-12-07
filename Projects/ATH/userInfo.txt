@@ -4,10 +4,28 @@ account_No:      123456789
 Name:            Alec Zabel-Mena
 Soc_Security:    420-69-6669
 PIN:             6969
-Balance:       400.69
+Balance:       790.69
 
 ATH    TRANSACTION        AMMOUNT        BALANCE           DATE
+162  Balance_Check           5900           5900           Fri Dec  4 00:50:29 2020
+162  Balance_Check           5900           5900           Fri Dec  4 00:50:29 2020
+162  Balance_Check           5900           5900           Fri Dec  4 00:50:29 2020
+162  Balance_Check           5900           5900           Fri Dec  4 00:50:29 2020
+541     Withdrawal           5900              0           Fri Dec  4 01:00:55 2020
 389     Withdrawal             20         400.69      Mon Dec  7 15:51:46 2020
 389     Withdrawal             20         400.69      Mon Dec  7 15:51:46 2020
 389     Withdrawal             20         400.69      Mon Dec  7 15:51:46 2020
 389     Withdrawal             20         400.69      Mon Dec  7 15:51:46 2020
+389     Withdrawal             20         400.69      Mon Dec  7 15:51:46 2020
+389     Withdrawal             20         400.69      Mon Dec  7 15:51:46 2020
+389     Withdrawal             20         400.69      Mon Dec  7 15:51:46 2020
+389     Withdrawal             20         400.69      Mon Dec  7 15:51:46 2020
+389     Withdrawal             20         400.69      Mon Dec  7 15:51:46 2020
+389     Withdrawal             20         400.69      Mon Dec  7 15:51:46 2020
+389     Withdrawal             20         400.69      Mon Dec  7 15:51:46 2020
+389     Withdrawal             20         400.69      Mon Dec  7 15:51:46 2020
+389     Withdrawal             20         400.69      Mon Dec  7 15:51:46 2020
+389     Withdrawal             10         390.69     Mon Dec  7 16:21:41 2020
+
+389        Deposit            400         790.69     Mon Dec  7 16:21:41 2020
+

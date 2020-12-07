@@ -160,7 +160,6 @@ int main(int argc, const char* argv[]){
             string searchTerm = searchTransaction.lookFor();
             vector<int> index;
 
-            outFile.setHeader();
             searchTransaction.search(searchTerm, transactions, index);
 
             cout<< "Do you wish to continue? Enter 0 to exit or 1 to continue." <<endl;
