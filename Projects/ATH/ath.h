@@ -16,7 +16,6 @@ struct Account{
     std::string name; // store the user's name.
     std::string socSec; // store the social security.
     std::string userPin; // store the PIN (used for accessing the atm).
-    double initBalance; // stores the user's initial balance.
     double currentBalance; // store the current balance (upon first execution, this is the initBalnace,
                         // on all other subseequent excutions, it is the current balance).
 };
