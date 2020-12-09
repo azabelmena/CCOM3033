@@ -103,10 +103,10 @@ void Write::setHeader(){ //prints the transaction header on the screen.
 void Write::write(ofstream& write, Account& account){
     write<< account.bankName <<endl<<endl;
     write<< "account_No:" << setw(15) << account.accNo <<endl;
-    write<< "Name:" << setw(27) << account.name <<endl;
-    write<< "Soc_Security:" << setw(15)<< account.socSec <<endl;
-    write<< "PIN:" << setw(17) << account.userPin <<endl;
-    write<< "Balance:"<< setw(12) << account.currentBalance <<endl;
+    write<< "Name:" << setw(24) << account.name <<endl;
+    write<< "Soc_Security:" << setw(17)<< account.socSec <<endl;
+    write<< "PIN:" << setw(19) << account.userPin <<endl;
+    write<< "Balance:"<< setw(17) << account.currentBalance <<endl;
 }
 
 // Writes the contents of the vector of TransactionInfo structs, transaction into the file, used to 
