@@ -206,33 +206,28 @@ void Transaction::checkBal(double& bal){
 // "Depsoit", "Withdrawals", or "Balance_Check", and reprompts them if 
 // they enter anything else (with some exceptions).
 string Search::lookFor(){
-    string transactionName; // store the user's input.
+    string transactionName; // store the Chosen string.
+    int choice;
 
     // ask the user which transaction they would like to look for.
     cout<< "What transaction would you like to look for?\n"
-        << "Deposit\n" << "Withdrawal\n" << "Balance_Check\n";
-        cin>> transactionName;
+        << "Press 1 for deposit\n" << "Press 2 for withdrawal\n" << "Press 3 for balance_Check\n";
+        cin>> choice;
 
-
-    // the following case handelling for the user input.
-    if(transactionName == "deposit" || transactionName == "DEPOSIT"){
-            transactionName = "Deposit";
+    // reprompt the user if they enter an invalid input.
+    while(choice != 1 && choice != 2 && choice !=3){
+        cout<< "Press 1 for Deposit\n" << "Press 2 for Withdrawal\n" << "Press 3 for Balance_Check\n";
+        cin>> choice;
     }
 
-    if(transactionName == "withdrawal" || transactionName == "WITHDRAWAL"){
-            transactionName = "Withdrawal";
+    if(choice == 1){
+        transactionName = "Deposit";
     }
-
-    if(transactionName == "balance_check" || transactionName == "BALANCE_CHECK"){
-            transactionName = "Balance_Check";
+    else if(choice == 2){
+        transactionName = "Withdrawal";
     }
-
-    // while the user enters anything other than the appropriate options, reprompt
-    // the user.
-    while(transactionName != "Deposit" && transactionName != "Withdrawal" && transactionName != "Balance_Check"){
-        cout<< "Please enter one of the following transactions \n" 
-            << "Deposit \n" << "Withdrawal\n" << "Balance_Check\n";
-            cin >>transactionName;
+    else{
+        transactionName = "Balance_Check";
     }
 
     return transactionName; // return the user input.
