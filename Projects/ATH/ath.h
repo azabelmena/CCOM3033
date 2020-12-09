@@ -3,10 +3,7 @@ ath.h
 
 Here is where we define the structs and classes necessary for the program to fucntion. 
 There are two structs, which are used for storing data, and the classes consist solely of public member
-functions, some of which are constructors. We also note that although the instructions ask for an ACt_Bal to 
-be created, it does not make sense to do so, since using only one entry for the balance is sufficient; since the 
-init balance is only used once anyways, and the Act_Balances is used subseequently in all other executions of the 
-program, it makes sense to only have one variable for the balance.
+functions, some of which are constructors. 
 */
 #ifndef ATH_H
 #define ATH_H
@@ -19,7 +16,8 @@ struct Account{
     std::string name; // store the user's name.
     std::string socSec; // store the social security.
     std::string userPin; // store the PIN (used for accessing the atm).
-    double currentBalance; // store the balance (upon first execution, this is the initBalnace,
+    double initBalance; // stores the user's initial balance.
+    double currentBalance; // store the current balance (upon first execution, this is the initBalnace,
                         // on all other subseequent excutions, it is the current balance).
 };
 

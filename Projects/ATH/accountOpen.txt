@@ -4,9 +4,14 @@ account_No:        1234567
 Name:                 Lisa Gomez
 Soc_Security:    123-45-6789
 PIN:             1234
-Balance:         1000
+Init_Balance:        1000
+Act_Balance:     1420.69
 
 ATH    TRANSACTION        AMMOUNT        BALANCE           DATE
+381        Deposit           5000           5420           Thu Dec  3 13:06:17 2020
+381        Deposit           5000           5420           Thu Dec  3 13:06:17 2020
+162        Deposit            500           5920           Fri Dec  4 00:50:29 2020
+162     Withdrawal             20           5900           Fri Dec  4 00:50:29 2020
 162  Balance_Check           5900           5900           Fri Dec  4 00:50:29 2020
 162  Balance_Check           5900           5900           Fri Dec  4 00:50:29 2020
 162  Balance_Check           5900           5900           Fri Dec  4 00:50:29 2020
@@ -16,3 +21,13 @@ ATH    TRANSACTION        AMMOUNT        BALANCE           DATE
 541     Withdrawal           5900              0           Fri Dec  4 01:00:55 2020
 541        Deposit         420.69         420.69           Fri Dec  4 01:00:55 2020
 541        Deposit         420.69         420.69           Fri Dec  4 01:00:55 2020
+446        Deposit              5         425.69           Mon Dec  7 17:38:13 2020
+446     Withdrawal             20         405.69           Mon Dec  7 17:38:13 2020
+446  Balance_Check         405.69         405.69           Mon Dec  7 17:38:13 2020
+446  Balance_Check         405.69         405.69           Mon Dec  7 17:38:13 2020
+370        Deposit         420.69        1420.69      Tue Dec  8 21:48:17 2020
+370  Balance_Check        1420.69        1420.69      Tue Dec  8 21:48:17 2020
+370     Withdrawal           1000         420.69      Tue Dec  8 21:48:17 2020
+370     Withdrawal           1000         420.69      Tue Dec  8 21:48:17 2020
+115        Deposit           1000        1420.69     Tue Dec  8 21:50:01 2020
+

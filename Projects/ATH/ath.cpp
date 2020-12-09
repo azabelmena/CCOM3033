@@ -35,7 +35,8 @@ void Read::read(ifstream& read, Account& account){
    read>> userName >> first >> last; // read the first and the last name
         account.name = first+" "+last; // concatenate the first and last name.
    read>> socialSec >> account.socSec; // read the social security number.
-   read>> pinNum >> account.userPin; // read the pin number (used for validation).
+   read>> pinNum >> account.userPin; // read the pin number (used for validation) 
+   read>> userBalance >> account.initBalance;
    read>> userBalance >> account.currentBalance;
 
    read>>empty;
@@ -106,7 +107,8 @@ void Write::write(ofstream& write, Account& account){
     write<< "Name:" << setw(27) << account.name <<endl;
     write<< "Soc_Security:" << setw(15)<< account.socSec <<endl;
     write<< "PIN:" << setw(17) << account.userPin <<endl;
-    write<< "Balance: "<< setw(12) << account.currentBalance <<endl;
+    write<< "Init_Balance:"<< setw(12) << account.initBalance <<endl;
+    write<< "Act_Balance:"<< setw(12) << account.currentBalance <<endl;
 }
 
 // Writes the contents of the vector of TransactionInfo structs, transaction into the file, used to 
