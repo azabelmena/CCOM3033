@@ -16,6 +16,7 @@ struct Account{
     std::string name; // store the user's name.
     std::string socSec; // store the social security.
     std::string userPin; // store the PIN (used for accessing the atm).
+    double initBalance;
     double currentBalance; // store the current balance (upon first execution, this is the initBalnace,
                         // on all other subseequent excutions, it is the current balance).
 };
@@ -102,7 +103,7 @@ class Write{
         void close(std::ofstream&); // closes the file.
         void setHeader(std::ofstream&); // writes the transaction header into the file
         void setHeader(); // prints the transaction header in the command line.
-        void write(std::ofstream&, Account&); // writes the user's information into the file.
+        void write(std::ofstream&, double&); // writes the user's information into the file.
         void write(std::ofstream&, std::vector<TransactionInfo>); // writes the transaction info into the file.
 };
 

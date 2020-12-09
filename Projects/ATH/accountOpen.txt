@@ -4,32 +4,32 @@ account_No:        1234567
 Name:              Lisa Gomez
 Soc_Security:      123-45-6789
 PIN:               1234
-Balance:           420.69
+Init_Balance:      1000.00
+Act_Balance:       1000.00
 
 ATH    TRANSACTION        AMMOUNT        BALANCE           DATE
-541        Deposit         420.69         420.69           Fri Dec  4 01:00:55 2020
-541        Deposit         420.69         420.69           Fri Dec  4 01:00:55 2020
-446        Deposit              5         425.69           Mon Dec  7 17:38:13 2020
-446     Withdrawal             20         405.69           Mon Dec  7 17:38:13 2020
-446  Balance_Check         405.69         405.69           Mon Dec  7 17:38:13 2020
-446  Balance_Check         405.69         405.69           Mon Dec  7 17:38:13 2020
-370        Deposit         420.69        1420.69      	   Tue Dec  8 21:48:17 2020
-370  Balance_Check        1420.69        1420.69      	   Tue Dec  8 21:48:17 2020
-370     Withdrawal           1000         420.69      	   Tue Dec  8 21:48:17 2020
-370     Withdrawal           1000         420.69      	   Tue Dec  8 21:48:17 2020
-115        Deposit           1000        1420.69     	   Tue Dec  8 21:50:01 2020
-115        Deposit           1000        1420.69     	   Tue Dec  8 21:50:01 2020
-469        Deposit              0        1420.69      Tue Dec  8 22:14:33 2020
-469     Withdrawal           1000         420.69      Tue Dec  8 22:14:33 2020
-469     Withdrawal           1000         420.69      Tue Dec  8 22:14:33 2020
-469     Withdrawal           1000         420.69      Tue Dec  8 22:14:33 2020
-469     Withdrawal           1000         420.69      Tue Dec  8 22:14:33 2020
-469     Withdrawal           1000         420.69      Tue Dec  8 22:14:33 2020
-469     Withdrawal           1000         420.69      Tue Dec  8 22:14:33 2020
-469     Withdrawal           1000         420.69      Tue Dec  8 22:14:33 2020
-469     Withdrawal           1000         420.69      Tue Dec  8 22:14:33 2020
-469     Withdrawal           1000         420.69      Tue Dec  8 22:14:33 2020
-469     Withdrawal           1000         420.69      Tue Dec  8 22:14:33 2020
-469     Withdrawal           1000         420.69      Tue Dec  8 22:14:33 2020
-153  Balance_Check         420.69         420.69     Wed Dec  9 14:51:51 2020
-
+239        Deposit           5000           6000     Wed Dec  9 16:47:06 2020
+239     Withdrawal             30           5970     Wed Dec  9 16:47:06 2020
+239  Balance_Check           5970           5970     Wed Dec  9 16:47:06 2020
+163  Balance_Check           1000           1000     Wed Dec  9 16:49:11 2020
+340  Balance_Check           1000           1000     Wed Dec  9 17:02:58 2020
+122  Balance_Check           1000           1000     Wed Dec  9 17:03:24 2020
+529     Withdrawal             20            980     Wed Dec  9 17:31:09 2020
+529        Deposit             20           1000     Wed Dec  9 17:31:09 2020
+151  Balance_Check           1000           1000     Wed Dec  9 17:39:30 2020
+151     Withdrawal             20            980     Wed Dec  9 17:39:30 2020
+151        Deposit           5000           5980     Wed Dec  9 17:39:30 2020
+111        Deposit         420.69        1420.69     Wed Dec  9 17:53:08 2020
+301        Deposit             12           1012     Wed Dec  9 17:57:55 2020
+535        Deposit             40           1040     Wed Dec  9 17:59:59 2020
+234     Withdrawal             20            980     Wed Dec  9 18:01:08 2020
+174        Deposit             20           1020     Wed Dec  9 18:08:14 2020
+418        Deposit            100           1100     Wed Dec  9 18:11:51 2020
+498        Deposit            100           1100     Wed Dec  9 18:12:26 2020
+512        Deposit             20           1020     Wed Dec  9 18:23:30 2020
+469     Withdrawal             20            980     Wed Dec  9 18:24:34 2020
+322        Deposit             20           1020     Wed Dec  9 18:26:47 2020
+104        Deposit          69.69        1069.69     Wed Dec  9 18:29:21 2020
+480        Deposit             20           1020     Wed Dec  9 18:33:54 2020
+428        Deposit             20           1020     Wed Dec  9 18:34:38 2020
+435     Withdrawal             30            970     Wed Dec  9 18:35:22 2020

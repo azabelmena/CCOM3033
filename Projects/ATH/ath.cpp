@@ -36,6 +36,7 @@ void Read::read(ifstream& read, Account& account){
         account.name = first+" "+last; // concatenate the first and last name.
    read>> socialSec >> account.socSec; // read the social security number.
    read>> pinNum >> account.userPin; // read the pin number (used for validation) 
+   read>> userBalance >> account.initBalance;
    read>> userBalance >> account.currentBalance;
 
    read>>empty;
@@ -69,7 +70,7 @@ vector<TransactionInfo> Read::read(ifstream& readFile,TransactionInfo transactio
 
 // Opens the file for writing (note this overwrites the entire file).
 bool Write::open(ofstream& writeFile, string filename){
-    writeFile.open(filename); // open the same file.
+    writeFile.open(filename, ios::app); // open the same file.
 
     if(writeFile.fail()){
         cout<< "Could not open file." <<endl;
@@ -100,13 +101,10 @@ void Write::setHeader(){ //prints the transaction header on the screen.
 
 // Writes the contents of the Account struct account into the file, used to 
 // recover data that has been overwritten.
-void Write::write(ofstream& write, Account& account){
-    write<< account.bankName <<endl<<endl;
-    write<< "account_No:" << setw(15) << account.accNo <<endl;
-    write<< "Name:" << setw(24) << account.name <<endl;
-    write<< "Soc_Security:" << setw(17)<< account.socSec <<endl;
-    write<< "PIN:" << setw(19) << account.userPin <<endl;
-    write<< "Balance:"<< setw(17) << account.currentBalance <<endl;
+void Write::write(ofstream& write, double& currentBalance){
+    write.clear();
+    write.seekp(-179, ios::end);
+    write<< currentBalance <<endl;
 }
 
 // Writes the contents of the vector of TransactionInfo structs, transaction into the file, used to 

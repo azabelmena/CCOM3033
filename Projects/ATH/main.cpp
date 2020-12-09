@@ -38,7 +38,9 @@ int main(int argc, const char* argv[]){
     double userDeposit, userWithdrawal, userCheck; // set the variables for the
                            // deposit, withdrawal, and the balance check.
 
-    vector<TransactionInfo> transactions; // declare the vector that will hold the transaction info.
+    // declare the vectors that will hold the transaction info that is read, that is written, and
+    // that is searched.
+    vector<TransactionInfo> transactionsRead, transactionsWrite; 
 //---------------------------------------------------------------------------
 //---------------- read the relavant info -----------------------------------
     ifstream readUserInfo; // the ifstream object.
@@ -56,8 +58,12 @@ int main(int argc, const char* argv[]){
 
     outFile.open(writeUserInfo, argv[1]);
 
+    if(readUserInfo.eof()){
+        outFile.setHeader(writeUserInfo);
+    }
+
     // read any existing transaction info into the transactions vector.
-    transactions = inFile.read(readUserInfo,transactionInfo, transactions);
+    transactionsRead = inFile.read(readUserInfo,transactionInfo, transactionsRead);
 
 //-------------- ATH algorithm ----------------------------------------------
     // Welcome the user and prompt them to enter a menu option.
@@ -93,7 +99,9 @@ int main(int argc, const char* argv[]){
 
             // store the deposit information.
             transactionInfo = {athNo, "Deposit", userDeposit, account.currentBalance, currentTime};
-            transactions.push_back(transactionInfo); // puch the deposit information into the transactions vector.
+            transactionsRead.push_back(transactionInfo); // puch the deposit information into the transactionsRead vector.
+            transactionsWrite.push_back(transactionInfo); // puch the deposit information into the transactionsWrite vector.
+
 
             // print the user's transacted balance and aske them if they wish to continue.
             cout<< "You have deposited $"<< userDeposit <<" into your account. \n"
@@ -121,7 +129,8 @@ int main(int argc, const char* argv[]){
 
             // store the transaction info.
             transactionInfo = {athNo, "Withdrawal", userWithdrawal, account.currentBalance, currentTime};
-            transactions.push_back(transactionInfo); // push the transaction info.
+            transactionsRead.push_back(transactionInfo); // puch the deposit information into the transactionsRead vector.
+            transactionsWrite.push_back(transactionInfo); // puch the deposit information into the transactionsWrite vector.
 
             // display the ammount withdrawn and ask the user if they wish to continue.
             cout<< "You have withdrawn $"<< userWithdrawal <<" into your account. \n"
@@ -146,7 +155,8 @@ int main(int argc, const char* argv[]){
             transaction.checkBal(account.currentBalance); // print the current balance.
 
             transactionInfo = {athNo, "Balance_Check", account.currentBalance, account.currentBalance, currentTime};
-            transactions.push_back(transactionInfo);
+            transactionsRead.push_back(transactionInfo); // puch the deposit information into the transactionsRead vector.
+            transactionsWrite.push_back(transactionInfo); // puch the deposit information into the transactionsWrite vector.
 
             cout<< "Do you wish to continue? Enter 0 to exit or 1 to continue." <<endl;
                 cin>> yesNo;
@@ -170,7 +180,7 @@ int main(int argc, const char* argv[]){
             vector<int> index; // declare the index.
 
             // search and print (if any) the corresponding transactions.
-            searchTransaction.search(searchTerm, transactions, index);
+            searchTransaction.search(searchTerm, transactionsRead, index);
 
             cout<< "Do you wish to continue? Enter 0 to exit or 1 to continue." <<endl;
                 cin>> yesNo;
@@ -198,10 +208,9 @@ int main(int argc, const char* argv[]){
         }
     }while(userChoice != 0); // Do while the choice is not 0.
 
-    outFile.write(writeUserInfo, account); // write the user's account info.
+    outFile.write(writeUserInfo, transactionsWrite); // write the transaction info.
 
-    outFile.setHeader(writeUserInfo); // set the transaction header.
-    outFile.write(writeUserInfo, transactions); // write the transaction info.
+    outFile.write(writeUserInfo, account.currentBalance);
 
     outFile.close(writeUserInfo); // close the file from writing.
     inFile.close(readUserInfo); // close the file from reading.
