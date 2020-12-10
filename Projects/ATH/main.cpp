@@ -45,6 +45,7 @@ int main(int argc, const char* argv[]){
 //---------------- read the relavant info -----------------------------------
     ifstream readUserInfo; // the ifstream object.
     ofstream writeUserInfo; // the ofstream object.
+    fstream writeUserBalance; // declare the fstream objects for writing the current balance to the file.
 
     inFile.open(readUserInfo, argv[1]);
 
@@ -210,7 +211,16 @@ int main(int argc, const char* argv[]){
 
     outFile.write(writeUserInfo, transactionsWrite); // write the transaction info.
 
-    outFile.write(writeUserInfo, account.currentBalance);
+    //open writeUserBalance for writing, we also open it for reading so that 
+    //the information is not truncated.
+    writeUserBalance.open(argv[1], ios::in|ios::out);
+
+    writeUserBalance.clear(); // clear the read/write position.
+    writeUserBalance.seekp(186, ios::beg); // seek the opsition where the current balance is located.
+    writeUserBalance<< account.currentBalance; // write over the current balance
+
+    writeUserBalance.clear(); // clear again.
+    writeUserBalance.close(); // close writeUserBalance from reading and writing.
 
     outFile.close(writeUserInfo); // close the file from writing.
     inFile.close(readUserInfo); // close the file from reading.

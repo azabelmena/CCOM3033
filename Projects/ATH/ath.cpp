@@ -103,7 +103,7 @@ void Write::setHeader(){ //prints the transaction header on the screen.
 // recover data that has been overwritten.
 void Write::write(ofstream& write, double& currentBalance){
     write.clear();
-    write.seekp(-179, ios::end);
+    write.seekp(185, ios::beg);
     write<< currentBalance <<endl;
 }
 
