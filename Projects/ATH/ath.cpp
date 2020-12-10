@@ -99,14 +99,6 @@ void Write::setHeader(){ //prints the transaction header on the screen.
 }
 
 
-// Writes the contents of the Account struct account into the file, used to 
-// recover data that has been overwritten.
-void Write::write(ofstream& write, double& currentBalance){
-    write.clear();
-    write.seekp(185, ios::beg);
-    write<< currentBalance <<endl;
-}
-
 // Writes the contents of the vector of TransactionInfo structs, transaction into the file, used to 
 // recover data that has been overwritten.
 void Write::write(ofstream& write, vector<TransactionInfo> transaction){

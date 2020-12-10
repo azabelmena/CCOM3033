@@ -103,7 +103,6 @@ class Write{
         void close(std::ofstream&); // closes the file.
         void setHeader(std::ofstream&); // writes the transaction header into the file
         void setHeader(); // prints the transaction header in the command line.
-        void write(std::ofstream&, double&); // writes the user's information into the file.
         void write(std::ofstream&, std::vector<TransactionInfo>); // writes the transaction info into the file.
 };
 
